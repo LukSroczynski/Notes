@@ -2,4 +2,4 @@
 
 List of useful commands:
 
-commit -a -m "Message"
+commit -a -m " Message "
