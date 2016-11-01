@@ -2,7 +2,7 @@
 
 List of useful commands:
 
-
+git init
 
 git status
 
