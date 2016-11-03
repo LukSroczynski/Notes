@@ -1,4 +1,4 @@
-# How To Use Git / GitHub
+## How To Use Git / GitHub
 <h3>Useful tips: </h3>
 - Git it's a version control system and it works on your local PC
 - GitHub is a remote server
