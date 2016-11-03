@@ -6,7 +6,7 @@ Git useful tips:
 <b><h1>List of useful commands:</h1></b>
 
 - <i>git init</i> \<project\> <br>
-Create an empty Git repository or reinitialize an existing one
+> Create an empty Git repository or reinitialize an existing one
 
 - <i>git add</i> <file or .> <br>
 ><b> git add * </b> means add all files in the current directory, except for files, whose name begin with a dot. This is your shell >functionality, actually, Git only receives a list of files. <br>
