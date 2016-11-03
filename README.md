@@ -4,7 +4,7 @@ Git useful tips:
 - GitHub is a remote server
 
 <b><h1>List of useful commands:</h1></b>
-'''git
+```git
 - <i>git init</i> \<project\> <br>
 > Create an empty Git repository or reinitialize an existing one
 
