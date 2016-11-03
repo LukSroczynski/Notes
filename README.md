@@ -5,7 +5,7 @@
 
 ***
 
-<b><h1>List of useful commands:</h1></b>
+#<b><h1>List of useful commands:</h1></b>
 
 ```git
   git init <project>
