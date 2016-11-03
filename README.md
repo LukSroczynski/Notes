@@ -3,7 +3,7 @@ Git useful tips:
 - Git it's a version control system and it works on your local PC
 - GitHub is a remote server
 
-<b>List of useful commands:</b>
+<b><h1>List of useful commands:</h1></b>
 
 - <i>git init</i> \<project\> <br>
 Create an empty Git repository or reinitialize an existing one
