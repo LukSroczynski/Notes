@@ -5,7 +5,7 @@ Git useful tips:
 
 <b>List of useful commands:</b>
 
-- <i>git init</i> /<project/> <br>
+- <i>git init</i> \<project\> <br>
 Create an empty Git repository or reinitialize an existing one
 
 - <i>git add</i> <file or .> <br>
