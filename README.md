@@ -12,7 +12,7 @@ Git useful tips:
 > Create an empty Git repository or reinitialize an existing one
 
 ```git
-git add <file or .>
+  git add <file or .>
 ```
 
 > <b> git add * </b> means add all files in the current directory, except for files, whose name begin with a dot. This is your shell > functionality, actually, Git only receives a list of files. <br>
