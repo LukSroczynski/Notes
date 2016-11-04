@@ -8,13 +8,13 @@
 
 <b><h3>List of useful commands:</h3></b>
 
-```git
+```
   git init <project>
 ```
 
 > Create an empty Git repository or reinitialize an existing one
 
-```git
+```
   git add <file or .>
 ```
 
