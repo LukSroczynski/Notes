@@ -36,5 +36,24 @@
 
 > Create a working copy of a remote repository.
 
+```
+  git commit -a -m "message"
+```
+
+```
+  git status
+```
+
+```
+  git log
+```
+
+```
+  git diff
+```
+
+```
+  git diff --cached
+```
 
 
