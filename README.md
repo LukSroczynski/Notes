@@ -24,13 +24,13 @@
 > same, but it also adds files whose name begin with a dot.
 
 ```
-  git clone /PathToRepository
+  git clone <PathToRepository>
 ```
 
 > 1. Create a working copy of a local repository.
 
 ```
-  git clone username@host:/PathToRepository
+  git clone <username@host:/PathToRepository>
 ```
 
 > 2. Create a working copy of a remote repository.
