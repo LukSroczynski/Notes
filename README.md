@@ -1,8 +1,10 @@
 #How To Use Git / GitHub
 
 <h4>Useful tips: </h4>
-- Git it's a version control system and it works on your local PC
-- GitHub is a remote server
+-<b> Git </b> it's a version control system and it works on your local PC
+-<b> GitHub </b> is a remote server. 
+-<b> Simple Workflow </b>
+Local -> Staging Area -> Working Copy of the Repository -> Remote Server
 
 ---
 
@@ -34,4 +36,6 @@
 ```
 
 > Create a working copy of a remote repository.
+
+
 
