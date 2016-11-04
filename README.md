@@ -25,7 +25,13 @@
 
 ```
   git clone /PathToRepository
+```
+
+> 1. Create a working copy of a local repository.
+
+```
   git clone username@host:/PathToRepository
 ```
-> 1. Create a working copy of a local repository.
+
 > 2. Create a working copy of a remote repository.
+
