@@ -4,7 +4,7 @@
 -<b> Git </b> it's a version control system and it works on your local PC <br>
 -<b> GitHub </b> is a remote server. <br>
 -<b> Simple Workflow </b> <br>
-![alt tag](http://newtfire.org/dh/git_shell/gitWorkflow.jpg){ width: 50px; }
+<img src="http://newtfire.org/dh/git_shell/gitWorkflow.jpg" width="50" height="50" />
 
 
 <b><h3>List of useful commands:</h3></b>
