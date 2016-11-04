@@ -27,6 +27,5 @@
   git clone /PathToRepository
   git clone username@host:/PathToRepository
 ```
-> 1. Create a working copy of a local repository stored on your PC.
-
-> 2. Create a working copy of a local repository stored on your PC.
+> 1. Create a working copy of a local repository.
+> 2. Create a working copy of a remote repository.
