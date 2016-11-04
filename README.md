@@ -3,7 +3,8 @@
 <h4>Useful tips: </h4>
 -<b> Git </b> it's a version control system and it works on your local PC <br>
 -<b> GitHub </b> is a remote server. <br>
--<b> Simple Workflow </b>  Local -> Staging Area -> Working Copy of the Repository -> Remote Server
+-<b> Simple Workflow </b>
+![alt tag](http://newtfire.org/dh/git_shell/gitWorkflow.jpg)
 
 
 <b><h3>List of useful commands:</h3></b>
