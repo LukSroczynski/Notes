@@ -45,9 +45,11 @@
   git status
 ```
 
+
 ```
   git log
 ```
+
 
 ```
   git diff
