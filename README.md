@@ -60,7 +60,7 @@
 ```
   git diff
 ```
-> Shows changes between commits.
+> Shows changes between commits. <br>
 
 ```
   git diff --cached
