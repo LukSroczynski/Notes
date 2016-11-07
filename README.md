@@ -40,7 +40,7 @@
 ```
   git commit -a -m "message"
 ```
-> Commit add changes and commit them to the staging area
+> Add changes and commit them to the staging area
 
 ```
   git status
