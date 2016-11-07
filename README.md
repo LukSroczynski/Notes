@@ -46,7 +46,7 @@
   git status
 ```
 > Shows Branch you are on. Shows untracked files. <br>
-> With <b> -s </b> OR <b> --short you can see a short-format output.
+> With <b> -s </b> OR <b> --short </b> you can see a short-format output.
 
 ```
   git log
