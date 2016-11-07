@@ -51,7 +51,7 @@
   git status -s
   git status --short
 ``` 
-> Shows a short-format output.
+>> Shows a short-format output.
 
 ```
   git log
