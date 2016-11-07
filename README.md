@@ -61,10 +61,8 @@
   git diff
 ```
 > Shows changes between commits. <br>
-
 ```
   git diff --cached
 ```
-
 >> Shows the changes between the index and the HEAD(which is the last commit on this branch).
 >> This shows what has been added to the index and staged for a commit.
