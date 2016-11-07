@@ -40,24 +40,27 @@
 ```
   git commit -a -m "message"
 ```
-
+> Commit add changes and commit them to the staging area
 
 ```
   git status
 ```
-
+> Shows Branch you are on. Shows untracked files. <br>
+> With <b> -s </b> OR <b> --short you can see a short-format output.
 
 ```
   git log
 ```
-
+> Simply shows a commit logs.
 
 ```
   git diff
 ```
+> Shows changes between commits.
 
 ```
   git diff --cached
 ```
 
-
+> Shows the changes between the index and the HEAD(which is the last commit on this branch).
+> This shows what has been added to the index and staged for a commit.
