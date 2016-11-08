@@ -5,7 +5,7 @@
 -<b> GitHub </b> is a remote server. <br>
 -<b> Simple Workflow on Local Repository </b> <br>
 
-<img src="http://newtfire.org/dh/git_shell/gitWorkflow.jpg" width="280" height="164" />
+<img src="http://newtfire.org/dh/git_shell/gitWorkflow.jpg" width="320" height="188" />
 
 
 <b><h3>List of useful commands:</h3></b>
