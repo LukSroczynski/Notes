@@ -71,3 +71,12 @@
   git branch
 ```
 > Shows us a list of existing branches
+```
+  git branch <BranchName>
+```
+>> Creates new branch
+
+```
+  git checkout <BranchName>
+```
+> Switch branches
