@@ -14,7 +14,7 @@
   git init <project>
 ```
 
-> Create an empty Git repository or reinitialize an existing one
+> Create an empty Git repository or reinitialize an existing one.
 
 ```
   git add <file or .>
@@ -40,7 +40,7 @@
 ```
   git commit -a -m "message"
 ```
-> Add changes and commit them to the staging area
+> Add changes and commit them to the staging area.
 
 ```
   git status
