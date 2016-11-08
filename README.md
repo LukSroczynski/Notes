@@ -70,4 +70,4 @@
 ```
   git branch
 ```
-> Shows us a list of existing branch'es
+> Shows us a list of existing branches
