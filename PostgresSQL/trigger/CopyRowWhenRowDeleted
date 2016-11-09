@@ -1,0 +1,22 @@
+CREATE TRIGGER NameOfTrigger BEFORE DELETE 
+    ON MyTable
+    FOR EACH ROW
+    EXECUTE PROCEDURE Name_of_trigger_that_will_be_executed;
+    
+-------------------------------------------------------------------------------------------------------    
+
+CREATE FUNCTION public.Name_of_trigger_that_will_be_executed()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+    COST 100.0 AS 
+
+$BODY$
+    BEGIN
+    INSERT INTO Table_History(
+	id, name)
+	VALUES (OLD.id, OLD.name);
+    RETURN OLD;        
+    END;
+$BODY$;
+
+
