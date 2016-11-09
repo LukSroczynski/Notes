@@ -7,7 +7,6 @@
 
 <img src="http://newtfire.org/dh/git_shell/gitWorkflow.jpg" width="320" height="188" />
 
-
 <b><h3>List of useful commands:</h3></b>
 
 ```
