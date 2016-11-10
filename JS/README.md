@@ -5,6 +5,7 @@
 - .unshift() - add record at first place inside array.
 - .push() - add data to the end of the array
 - global variables - define outside function OR when you want GlobalVariable inside function do it without var.
+
 ``` javascript
 var globalTest1 = 3;
 
@@ -14,3 +15,4 @@ var globalTest1 = 3;
   }
   
 ```
+- undefined - when JavaScript variables are declared, they have an initial value of undefined. If you do a mathematical operation on an undefined variable your result will be NaN which means "Not a Number". If you concatenate a string with an undefined variable, you will get a literal string of "undefined".
