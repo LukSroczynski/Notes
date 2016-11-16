@@ -1,4 +1,4 @@
-## Asynchronous vs synchronous
+## asynchronous vs synchronous
 
 When you execute something synchronously, you wait for it to finish before moving on to another task. When you execute something asynchronously, you can move on to another task before it finishes.
 
