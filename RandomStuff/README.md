@@ -8,4 +8,4 @@ Now, if you introduce multiple cores/processors into the mix, then things CAN ac
 
 All of this is about allowing the operating system to manage the completion of your task while you can go on in your code and do other things. Asynchronous programming is a complicated topic because of the semantics of how things tie together when you can do them at the same time. There are numerous articles and books on the subject; have a look!
 
-source: [stackoverflow ->](http://stackoverflow.com/questions/748175/asynchronous-vs-synchronous-execution-what-does-it-really-mean)
+[Asynchronous vs synchronous: SOURCE](http://stackoverflow.com/questions/748175/asynchronous-vs-synchronous-execution-what-does-it-really-mean)
