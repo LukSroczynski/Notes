@@ -79,3 +79,8 @@
   git checkout <BranchName>
 ```
 > Switch branches
+
+```
+  git push origin master:master-1
+```
+> push changes and create new branch
