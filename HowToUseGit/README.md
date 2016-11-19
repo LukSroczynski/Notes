@@ -95,3 +95,9 @@
   git push -u origin master
 ```
 > because of -u option we made origin as a default destination
+
+
+``` git
+  git branch -d nameOftheBrach
+```
+> just simply removes branch that we created
