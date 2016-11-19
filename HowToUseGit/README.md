@@ -90,3 +90,8 @@
   HEAD
 ```
 > refers to last commit, on current branch or timeline we are on.
+
+```
+  git push -u origin master
+```
+> because of -u option we made origin as a default destination
