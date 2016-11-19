@@ -101,3 +101,8 @@
   git branch -d nameOftheBranch
 ```
 > just simply removes branch that we created
+
+```
+  git checkout -b branchName
+```
+> create and checkout branch
