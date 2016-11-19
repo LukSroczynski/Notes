@@ -98,6 +98,6 @@
 
 
 ``` git
-  git branch -d nameOftheBrach
+  git branch -d nameOftheBranch
 ```
 > just simply removes branch that we created
