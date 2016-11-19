@@ -84,3 +84,9 @@
   git push origin master:master-1
 ```
 > push changes and create new branch
+
+
+```
+  HEAD
+```
+> refers to last commit, on current branch or timeline we are on.
