@@ -39,7 +39,7 @@
 ```
   git commit -a -m "message"
 ```
-> Add changes and commit them to the staging area.
+> Add changes and commit them to the staging area. (add all tracked files not new ones)
 
 ```
   git status
@@ -79,3 +79,30 @@
   git checkout <BranchName>
 ```
 > Switch branches
+
+```
+  git push origin master:master-1
+```
+> push changes and create new branch
+
+
+```
+  HEAD
+```
+> refers to last commit, on current branch or timeline we are on.
+
+```
+  git push -u origin master
+```
+> because of -u option we made origin as a default destination
+
+
+``` git
+  git branch -d nameOftheBranch
+```
+> just simply removes branch that we created
+
+```
+  git checkout -b branchName
+```
+> create and checkout branch
