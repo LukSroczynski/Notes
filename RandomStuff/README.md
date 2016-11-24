@@ -7,3 +7,6 @@ That being, said, in the context of computers this translates into executing a p
 - [STACKOVERFLOW - Asynchronous vs synchronous execution, what does it really mean?](http://stackoverflow.com/questions/748175/asynchronous-vs-synchronous-execution-what-does-it-really-mean) <br>
 
 - [QUORA - What is the difference between synchronous vs asynchronous and blocking vs non-blocking?](https://www.quora.com/What-is-the-difference-between-synchronous-vs-asynchronous-and-blocking-vs-non-blocking)
+
+# Web Application - Tutorial
+- [Java Web Application Tutorial ](http://www.journaldev.com/1854/java-web-application-tutorial-for-beginners)
