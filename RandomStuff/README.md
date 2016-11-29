@@ -10,3 +10,8 @@ That being, said, in the context of computers this translates into executing a p
 
 # Web Application - Tutorial
 - [Java Web Application Tutorial ](http://www.journaldev.com/1854/java-web-application-tutorial-for-beginners)
+
+
+
+#Here's How to Prepare for Tech Interviews
+- [Here's How to Prepare for Tech Interviews](https://www.reddit.com/r/cscareerquestions/comments/1jov24/heres_how_to_prepare_for_tech_interviews)
