@@ -16,5 +16,5 @@ That being, said, in the context of computers this translates into executing a p
 #Here's How to Prepare for Tech Interviews
 - [Here's How to Prepare for Tech Interviews](https://www.reddit.com/r/cscareerquestions/comments/1jov24/heres_how_to_prepare_for_tech_interviews)
 
-#5 things before job search
-- [5 things before job search.](https://medium.freecodecamp.com/5-key-learnings-from-the-post-bootcamp-job-search-9a07468d2331#.ekvtx4ur0)
+#5 things to know before job search
+- [5 things to know before job search](https://medium.freecodecamp.com/5-key-learnings-from-the-post-bootcamp-job-search-9a07468d2331#.ekvtx4ur0)
