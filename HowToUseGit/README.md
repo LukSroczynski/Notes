@@ -85,7 +85,6 @@
 ```
 > push changes and create new branch
 
-
 ```
   HEAD
 ```
