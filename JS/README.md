@@ -5,7 +5,7 @@
 - .unshift() - add record at first place inside array.
 - .push() - add data to the end of the array
 - [.slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) - slice an array
-- global variables - define outside function OR when you want GlobalVariable inside function do it without var.
+- global variables - define outside function OR when you want GlobalVariable inside function do it without var. <br>
 (Don't use var anymore. Use let and const)
 
 ``` javascript
