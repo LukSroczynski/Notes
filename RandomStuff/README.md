@@ -19,5 +19,5 @@ That being, said, in the context of computers this translates into executing a p
 # 5 things to know before job search
 - [5 things to know before job search](https://medium.freecodecamp.com/5-key-learnings-from-the-post-bootcamp-job-search-9a07468d2331#.ekvtx4ur0)
 
-# CORS
+# CORS - HTTP access control 
 - [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
