@@ -4,8 +4,8 @@ public List<String> getColumnsNames() {
         try {
             stmt = c.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT DISTINCT *\n"
-                    + "FROM email_mod.\"Mail_Events\"\n"
-                    + "WHERE id_queue = (SELECT min(id_queue) FROM email_mod.\"Mail_Events\" );");
+                    + "FROM XXX"
+                    + "WHERE id_queue = (SELECT min(id_queue) FROM XXX);");
             
             ColumnsNames.clear();
             ColumnsNames = getColumnsNames(rs);
