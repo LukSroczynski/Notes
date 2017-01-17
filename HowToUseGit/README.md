@@ -7,6 +7,10 @@
 
 <img src="http://newtfire.org/dh/git_shell/gitWorkflow.jpg" width="320" height="188" />
 
+
+<b><h3>Articles to read: </h3></b>
+https://dev.to/gonedark/3-git-commands-i-use-every-day
+
 <b><h3>List of useful commands:</h3></b>
 
 ```
