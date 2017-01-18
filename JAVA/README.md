@@ -4,5 +4,7 @@
 
 - MimeUtility.encodeText(from,"UTF-8","B");  - used to encode text to specific charset
 
+- http://blog.2ndquadrant.com/using-java-arrays-to-insert-retrieve-update-postgresql-arrays/
+
 
 # Java EE
