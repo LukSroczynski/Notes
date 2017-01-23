@@ -1,3 +1,7 @@
+    private static final String ALGORITHM = "AES";
+    private static final byte[] keyValue =
+            new byte[] { 'X', 'Y', 'X', 'Y', 'X', 'Y', 'X', 'Y', 'X', 'Y', 'X', 'Y', 'X', 'Y', 'X', 'Y' };    
+
     public String encrypt(String valueToEncrypt) {
         String encryptedValue = null;
         try {
