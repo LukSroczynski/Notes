@@ -17,10 +17,10 @@
     </Directory>
 </VirtualHost>
 ```
-4. Open your hosts file (C:\Windows\System32\drivers\etc\hosts).
-5. Add
+4. Open your hosts file (```xmlC:\Windows\System32\drivers\etc\hosts```).
+5. Add: 
 ```xml
-127.0.0.1 transitcalculator.localhost #transitCalculator
+```xml 127.0.0.1 transitcalculator.localhost #transitCalculator ```
 ```
 to the end of the file (before the Spybot - Search & Destroy stuff if you have that installed).
 
