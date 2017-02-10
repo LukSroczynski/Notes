@@ -1,4 +1,4 @@
-<b> XAMPP </b> 
+<b><h1> XAMPP - CUSTOM PATH </h1> </b> 
 [XAMPP - Custom Path](http://stackoverflow.com/questions/1408/make-xampp-apache-serve-file-outside-of-htdocs)
 
 
