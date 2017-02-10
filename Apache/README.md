@@ -39,5 +39,5 @@ to the end of the file (before the Spybot - Search & Destroy stuff if you have t
 
 <h2>Change your document root</h2>
 
-1. Edit ~line 176 in C:\xampp\apache\conf\httpd.conf; change DocumentRoot ```xml"C:/xampp/htdocs"``` to #DocumentRoot "C:/Projects" (or whatever you want).
+1. Edit ~line 176 in ```xml "C:\xampp\apache\conf\httpd.conf" ``` change DocumentRoot ```xml "C:/xampp/htdocs" ``` to #DocumentRoot ```xml"C:/Projects"``` (or whatever you want).
 2. Edit ~line 203 to match your new location (in this case ```xmlC:/Projects```).
