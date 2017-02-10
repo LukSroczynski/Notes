@@ -1,5 +1,5 @@
 <b> XAMPP </b> 
-[XAMPP - CustomPath](http://stackoverflow.com/questions/1408/make-xampp-apache-serve-file-outside-of-htdocs)
+[XAMPP - Custom Path](http://stackoverflow.com/questions/1408/make-xampp-apache-serve-file-outside-of-htdocs)
 
 
 <h2>Virtual Hosts</h2>
@@ -31,8 +31,8 @@ to the end of the file (before the Spybot - Search & Destroy stuff if you have t
 
 <h2> Make an Alias </h2>
 
-Starting ~line 200 of your http.conf file, copy everything between <Directory "C:/xampp/htdocs"> and </Directory> (~line 232) and paste it immediately below with C:/xampp/htdocs replaced with your desired directory (in this case C:/Projects) to give your server the correct permissions for the new directory.
-Find the <IfModule alias_module></IfModule> section (~line 300) and add
+1. Starting ~line 200 of your http.conf file, copy everything between <Directory "C:/xampp/htdocs"> and </Directory> (~line 232) and paste it immediately below with C:/xampp/htdocs replaced with your desired directory (in this case C:/Projects) to give your server the correct permissions for the new directory.
+2. Find the ```xml <IfModule alias_module></IfModule> ``` section (~line 300) and add
 
 Alias /transitCalculator "C:/Projects/transitCalculator/trunk"
 (or whatever is relevant to your desires) below the Alias comment block, inside the module tags.
