@@ -31,12 +31,13 @@ to the end of the file (before the Spybot - Search & Destroy stuff if you have t
 
 <h2> Make an Alias </h2>
 
-1. Starting ~line 200 of your http.conf file, copy everything between <Directory "C:/xampp/htdocs"> and </Directory> (~line 232) and paste it immediately below with C:/xampp/htdocs replaced with your desired directory (in this case C:/Projects) to give your server the correct permissions for the new directory.
+1. Starting ~line 200 of your http.conf file, copy everything between ```xml<Directory "C:/xampp/htdocs">``` and ```xml</Directory>``` (~line 232) and paste it immediately below with ```xmlC:/xampp/htdocs``` replaced with your desired directory (in this case ```xmlC:/Projects```) to give your server the correct permissions for the new directory.
 2. Find the ```xml <IfModule alias_module></IfModule> ``` section (~line 300) and add
 
-Alias /transitCalculator "C:/Projects/transitCalculator/trunk"
-(or whatever is relevant to your desires) below the Alias comment block, inside the module tags.
-Change your document root
+```xml Alias /transitCalculator "C:/Projects/transitCalculator/trunk" ```
+(or whatever is relevant to your desires) below the Alias comment block, inside the module tags. 
 
-Edit ~line 176 in C:\xampp\apache\conf\httpd.conf; change DocumentRoot "C:/xampp/htdocs" to #DocumentRoot "C:/Projects" (or whatever you want).
-Edit ~line 203 to match your new location (in this case C:/Projects).
+<h2>Change your document root</h2>
+
+1. Edit ~line 176 in C:\xampp\apache\conf\httpd.conf; change DocumentRoot ```xml"C:/xampp/htdocs"``` to #DocumentRoot "C:/Projects" (or whatever you want).
+2. Edit ~line 203 to match your new location (in this case ```xmlC:/Projects```).
