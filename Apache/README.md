@@ -4,7 +4,7 @@
 
 <h2>Virtual Hosts</h2>
 
-1. Open C:\xampp\apache\conf\extra\httpd-vhosts.conf.
+1. Open ```xmlC:\xampp\apache\conf\extra\httpd-vhosts.conf.```
 2. Un-comment line 19 (NameVirtualHost *:80).
 3. Add your virtual host (~line 36):
 ```xml
