@@ -29,3 +29,7 @@ The Cross-Origin Resource Sharing standard works by adding new HTTP headers that
 Subsequent sections discuss scenarios, as well as provide a breakdown of the HTTP headers used. 
 
 - [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+
+- [Objectives - development path](https://forum.freecodecamp.com/t/computer-guide-web-development-with-computer-science-foundations-comprehensive-path/64516)
+
+
