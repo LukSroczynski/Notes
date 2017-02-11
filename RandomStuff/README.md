@@ -30,6 +30,7 @@ Subsequent sections discuss scenarios, as well as provide a breakdown of the HTT
 
 - [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
 
-- [Objectives - development path](https://forum.freecodecamp.com/t/computer-guide-web-development-with-computer-science-foundations-comprehensive-path/64516)
+
+# [Objectives - development path](https://forum.freecodecamp.com/t/computer-guide-web-development-with-computer-science-foundations-comprehensive-path/64516)
 
 
