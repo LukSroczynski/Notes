@@ -1,9 +1,8 @@
 ### CORS
 ```
-Cross-origin resource sharing 
+<h4><b> [MDN - CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) </h4></b>
 ```
 
-<h4><b> [MDN - CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) </h4></b>
 
 ### XMLHttpRequest  - API that provides client functionality to transfer data between client / server.
 
