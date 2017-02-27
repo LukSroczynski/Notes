@@ -78,4 +78,9 @@ Silnik-Zakres:
 
 ## Zagnieżdżony Zakres
 
+Zakres - zestaw zasad, który szuka zmiennych. Zazwyczaj jest więcej niż jeden Zakres. 
+
+Jeśli funkcja jest zagniżdżona w innej funkcji i zmienna nie może być znaleziona 
+w tej wewnętrznej funkcji Silnik przechodzi do kolejnego zewnętrznego Zakresu kontynuując to
+aż do Globalnego Zakresu.
 

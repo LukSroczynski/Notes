@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="unnamed">
+    <output-path>$PROJECT_DIR$/out/artifacts/unnamed</output-path>
+    <root id="root">
+      <element id="directory" name="Resources">
+        <element id="dir-copy" path="$PROJECT_DIR$/../../Waffle.1.8.2/Waffle/Samples" />
+      </element>
+    </root>
+  </artifact>
+</component>
