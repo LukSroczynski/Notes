@@ -39,13 +39,31 @@ Jest to po prostu stworzenie zmiennej i zarezerwowanie miejsca w pamięci i prze
 Silnik Javascriptu jest bardziej skomplikowany niż powyższe kroki. W skrócie kod javascriptu jest kompilowany tuż przed jego uruchomieniem.
 Program bierze polecenie, kompiluje je i jest od razu gotowy do wykonania go. Wszystko to zajmuje ledwo kilka mikrosekund. 
 
-## Zrozumieć zakres:
+##Zrozumieć zakres:
 
 Na początek podzielmy zakres na role jakie odgrywa: 
 
 - Silnik (ang. Engine) - jest odpowiedzialny za kompilację i wykonianie naszego programu od początku do końca.
-- Kompilator (ang. Compiler) - zajmuje się brudną robotą. Czyli Parsing oraz Code-Generation (patrz poprzedni rozdział).
-- Zakres (ang. Scope) - zbiera i przechowuje wszystkie zadeklarowane zmienne. Dodakowo determinuje ich dostępność w aktualnie wykonywanym kodzie.
+- Kompilator (ang. Compiler) - powiązany z silnikiem. Zajmuje się brudną robotą, czyli generacją i analizą kodu. Jest to Parsing oraz Code-Generation (patrz poprzedni rozdział).
+- Zakres (ang. Scope) - również powiązany z silnikiem. Zbiera i przechowuje wszystkie zadeklarowane zmienne. Dodakowo determinuje ich dostępność w aktualnie wykonywanym kodzie.
+
+### Jak działa kompilator? 
+
+```javascript
+let a = 5;
+```
+
+1. Po napotkaniu powyższej deklaracji Kompilator pyta Zakres czy zmienna istnieje w zbiorze dla podanego Zakresu (ang. Scope Collection):
+- if(true) - kompilator ignoruje deklarację i idzie dalej.
+- else - kompilator prosi Zakres o zdeklarowanie zmiennej dla danego Zakresu
+> Podsumowując: Kompilator deklaruje zmienną o ile nie została wcześniej zadeklarowana
+
+2. Następnie kompilator produkuje kod dla Silnika, który jest
+ potem przeznaczony do wykonania i jest odpowiedzialny za wykonanie przypisania do zmiennej wartości literalnej. 
+Kod wykonywany przez Silnik najpierw zapyta czy zmienna o podanej nazwie istnieje w bieżącym zakresie. 
+- if(true) - Silnik użyje zmiennej
+- else - Silnik zacznie szukać w innych miejscach. ( patrz dalej w podpunkcie: Zakres zagnieżdżony )
+> Podsumowując: Kompilator szuka zmiennej i przypisuje jej wartość
 
 ## Jak działa kompilator? 
 
