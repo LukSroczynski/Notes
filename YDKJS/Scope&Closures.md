@@ -39,11 +39,43 @@ Jest to po prostu stworzenie zmiennej i zarezerwowanie miejsca w pamięci i prze
 Silnik Javascriptu jest bardziej skomplikowany niż powyższe kroki. W skrócie kod javascriptu jest kompilowany tuż przed jego uruchomieniem.
 Program bierze polecenie, kompiluje je i jest od razu gotowy do wykonania go. Wszystko to zajmuje ledwo kilka mikrosekund. 
 
-##Zrozumieć zakres:
+## Zrozumieć zakres:
 
 Na początek podzielmy zakres na role jakie odgrywa: 
 
 - Silnik (ang. Engine) - jest odpowiedzialny za kompilację i wykonianie naszego programu od początku do końca.
 - Kompilator (ang. Compiler) - zajmuje się brudną robotą. Czyli Parsing oraz Code-Generation (patrz poprzedni rozdział).
 - Zakres (ang. Scope) - zbiera i przechowuje wszystkie zadeklarowane zmienne. Dodakowo determinuje ich dostępność w aktualnie wykonywanym kodzie.
+
+## Jak działa kompilator? 
+
+Silnik wykonuje kod, który kompilator wyprodukował. Szuka on potem zmiennej, którą
+konsultuje z Zakresem. 
+
+> LHS - szuka kontenera, gdzie może przypisać wartość
+
+> RHS - szuka wartości zmiennej 
+
+```javascript
+
+function foo(a) {
+    console.log( a ); // 2
+}
+foo( 2 );
+
+```
+
+Silnik-Zakres: 
+- Silnik pyta Zakres o referencję RHS ``` foo() ```
+- Zakres odbiera od Kompilatora deklarację 
+- Silnik wykonuje funkcję
+- Silnik pyta Zakres o referencję LHS ``` a ```
+- Zakres obiera od Kompilatora deklarację ``` a ``` jako parametru funkcji
+- Silnik przypisuje wartość ``` 1 ``` do ``` a ```
+- Silnik pyta Zakres  ``` console ``` potem o ``` log(...) ```
+- Silnik pyta Zakres o referencję RHS do ``` a ```
+- Silnik przekazuje ``` a ``` do ``` log() ```
+
+## Zagnieżdżony Zakres
+
 
