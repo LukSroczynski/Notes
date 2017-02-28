@@ -1,3 +1,5 @@
+# Czym jest zasięg?
+
 Podstawowym paradygmatem z jakim spotykamy się w praktycznie każdym języku jest pojęcie zmiennej. Jest to krytyczna część języków programowania. Pozwala
 na przechowywanie, modyfikowanie i pobieranie stanu naszej apliakcji. Istnieją pewne reguły, dzięki którym program odszukuje zmienne i nazywa się to zakresem. 
 
@@ -53,8 +55,38 @@ Silnik wykonuje kod, który kompilator wyprodukował. Szuka on potem zmiennej, k
 konsultuje z Zakresem. 
 
 > LHS - szuka kontenera, gdzie może przypisać wartość
+Przypisanie może być poprzez operator równości lub jako parametr w funkcji
 
-> RHS - szuka wartości zmiennej 
+> RHS - szuka wartości zmiennej, pobranie jej wartości
+
+
+```javascript
+
+/*
+    Tutaj jest referencja RHS. Nic nie jest przypisane do a
+    Zamiast tego szukamy wartość a
+ */
+console.log(a);
+
+/*
+    Tutaj jest referencja LHS, nie obchodzi nas jaka jest wartość
+    Chcemy znaleźć zmienną i przypisać wartość
+ */
+a = 2;
+
+```
+
+#### Jak działa silnik? ~streszczenie krótki opis
+Silnik javascriptu na początku komiluje kod przed jego wykonaniem. Podczas tego 
+rozdziela polecenie ``` var a = 2; ``` na dwa kroki
+- deklaracja ``` var a ``` w zakresie. To jest robione na początku przed wykonianiem kodu
+- przypisanie ``` a = 2 ``` (referencja LHS). Szuka zmiennej i jeśli znajdzie przypisuje wartość
+
+Szukanie RHS, które nie znajdzie referencji wyrzuca błąd ReferenceError 
+
+Szukanie LHS, które nie znajdzie referencji automatycznie tworzy globalną zmienną. Można temu
+zapobieć poprzez zastosowanie "use strict"
+ 
 
 ```javascript
 
@@ -83,4 +115,38 @@ Zakres - zestaw zasad, który szuka zmiennych. Zazwyczaj jest więcej niż jeden
 Jeśli funkcja jest zagniżdżona w innej funkcji i zmienna nie może być znaleziona 
 w tej wewnętrznej funkcji Silnik przechodzi do kolejnego zewnętrznego Zakresu kontynuując to
 aż do Globalnego Zakresu.
+
+# Czym jest leksykalny zasięg? 
+
+```javascript
+
+/*
+    Są tutaj trzy zakresy: 
+    - globalny
+    - foo()
+    - foo.bar
+ */
+
+
+function foo(a) {
+
+    var b = a * 2;
+
+    function bar(c) {
+        console.log( a, b, c );
+    }
+
+    bar(b * 3);
+}
+
+foo( 2 ); // 2 4 12 
+
+```
+
+Założenie: Każda funkcja ma nowy 'bąbelek zakresu'
+
+Szukanie zmiennej jak w powyższym przykładzie zatrzymuje się zawsze w momencie jak 
+znajdzie zmienną. Przykładowo szukanie c zatrzymuje sie w bar i nie przechodzi do foo.
+Szukający to Silnik
+
 
