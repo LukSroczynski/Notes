@@ -136,15 +136,16 @@ aż do Globalnego Zakresu.
 
 # Czym jest leksykalny zasięg? 
 
+Nazwa zmiennej, funkcji to inaczej nazwa identyfikatora 
+
 ```javascript
 
 /*
     Są tutaj trzy zakresy: 
-    - globalny
-    - foo()
-    - foo.bar
+    - zakres globalny - zawiera identyfikator foo
+    - zakres foo - zawiera identyfikator a, b, bar
+    - zakres foo.bar - zawiera identyfikator c 
  */
-
 
 function foo(a) {
 
@@ -153,7 +154,6 @@ function foo(a) {
     function bar(c) {
         console.log( a, b, c );
     }
-
     bar(b * 3);
 }
 
@@ -161,10 +161,25 @@ foo( 2 ); // 2 4 12
 
 ```
 
+
+
 Założenie: Każda funkcja ma nowy 'bąbelek zakresu'
 
 Szukanie zmiennej jak w powyższym przykładzie zatrzymuje się zawsze w momencie jak 
 znajdzie zmienną. Przykładowo szukanie c zatrzymuje sie w bar i nie przechodzi do foo.
 Szukający to Silnik
 
+Globalne zmienne są automatycznie właściwościami globalnego obiektu ``` window ```. 
+Jest więc możliwe użycie właściwości obiektu zamiast leksykalnej nazwy.
+Przykład: ``` window.a ```
 
+### Oszukanie leksykalne
+
+Zakres leksykalny to w skrócie zakres zdefiniowany przez autora gdzie mają się znajdywać funkcje. 
+W fazie lexing kompilacji jest wiadomo gdzie są wszystkie identyfikatory zadeklarowane i przewidziane jak będą wykonane
+
+Javascript ma dwa mechanizmy do modyfikacji leksykalnego zakresu podczas run-time.
+Niestety to tak zwane oszukiwanie prowadzi do spadku wydajności. 
+
+Pierwsza funkcja to ``` eval(..) ``` bierze String jako argument. Możesz wygenerować kod w środku twojego kodu. 
+Pozwala to na modyfikację zakresu leksykalnego przez co możesz oszukać, ze jakiś kod był tam od początku.
