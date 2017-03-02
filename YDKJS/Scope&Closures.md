@@ -183,3 +183,89 @@ Niestety to tak zwane oszukiwanie prowadzi do spadku wydajności.
 
 Pierwsza funkcja to ``` eval(..) ``` bierze String jako argument. Możesz wygenerować kod w środku twojego kodu. 
 Pozwala to na modyfikację zakresu leksykalnego przez co możesz oszukać, ze jakiś kod był tam od początku.
+
+```javascript
+
+/*
+    str - definiuje za pomocą eval() zmienną b, modyfikując w ten sposób zakres leksykalny
+    zmienna b zdefiniowana w Stringu nadpisuje zmienną b=2 z zasięgu globalnego
+    
+    w przypadku użycia let nie działa tak samo 
+ */
+
+function foo(str, a) {
+    eval( str ); // cheating!
+    console.log( a, b );
+}
+
+var b = 2;
+
+foo( "var b = 3;", 1 ); // 1 3
+
+```
+
+Kolejną funkcją jest ``` with() ```. Tworzy kilka referencji właściwości obiektu bez 
+konieczności powtarzania referencji obiektu kilka razy. 
+
+```javascript
+
+/*
+    Zwykły obiekt z właściwościami
+ */
+
+var obj = {
+    a: 1,
+    b: 2,
+    c: 3
+};
+
+/*
+    W przypadku zwykłego wywołania obiektu trzeba powtarzać 'obj'
+ */
+
+obj.a = 2;
+obj.b = 3;
+obj.c = 4;
+
+/*
+    Tutaj jest wykonana funkcja 'with' przez co 'obj' jest wykonywane tylko raz
+ */
+
+with (obj) {
+    a = 3;
+    b = 4;
+    c = 5;
+}
+// e.g.
+console.log(obj.a); // a = 3
+
+```
+
+Kolejny przykład:
+
+```javascript
+
+function foo(obj) {
+    with (obj) {
+        a = 2;
+    }
+}
+
+var o1 = {
+    a: 3
+};
+
+var o2 = {
+    b: 3
+};
+
+foo( o1 );
+console.log( o1.a ); // 2
+
+foo( o2 );
+console.log( o2.a ); // undefined
+console.log( a ); // 2 -- Oops, leaked global!
+
+```
+
+
