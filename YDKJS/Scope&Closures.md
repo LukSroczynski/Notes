@@ -309,4 +309,73 @@ Dwa mechanizmy mogą oszukać Leksykalny Zakres eval() oraz with:
 
 # Funkcje vs Zakres Blokowy
 
+Na początek przypomnienie wszystkie funkcje tworzą swoje własne Zakresy. Każda funkcja, którą zdeklarujesz
+tworzy własny Zakres. Przykładowy kod: 
+
+```javascript
+
+/*
+    Zakres foo() zawiera 'a' 'b' 'c' 
+    Zakres bar() ma swój własny zakres, ale może korzystać foo() i globalnego
+    Tip: nie ma różnicy gdzie deklaracja zmiennej się pojawia
+    
+*/
+
+function foo(a) {
+    var b = 2;
+    
+    function bar() {
+        // ...
+    }
+    var c = 3;
+}
+
+```
+
+#### Ukrywanie się w zwykłym zakresie
+
+"Principle of Least Privilege" - Software design principle 
+> Projektując API dla modułów powinno się odkrywać tylko najpotrzebniejsze rzeczy, 
+a wszystko inne ukrywać. Przykład: 
+
+```javascript
+
+/*
+    Poniżej nieprawidłowa implementacja, gdyż funkcja doSomething() może być niewłaściwie użyta
+*/
+
+function makeCalculation(a) {
+    b = a + doSomething( a * 2 );
+
+    console.log( b * 3 );
+}
+
+function doSomething(a) {
+    return a + 1;
+}
+var b;
+makeCalculation( 2 ); // 21
+
+/*
+    Poniżej ta sama implementacja w bardziej prawidłowy sposób.
+    W tym przypadku wewnętrzna funkcja jest ukryta. 
+    Wszystko co znajduje sie w doSomething() nie jest dostępne poza makeCalculation()
+*/
+
+function makeCalculation(a) {
+    function doSomething(a) {
+        return a - 1;
+    }
+
+    var b;
+
+    b = a + doSomething( a * 2 );
+
+    console.log( b * 3 );
+}
+makeCalculation( 2 ); // 15
+
+```
+
+#### Unikanie kolizji (ang. Collision Avoidance)
 
