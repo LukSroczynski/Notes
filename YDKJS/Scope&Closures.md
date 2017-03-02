@@ -266,6 +266,47 @@ foo( o2 );
 console.log( o2.a ); // undefined
 console.log( a ); // 2 -- Oops, leaked global!
 
+/*
+    W przypadku o1: Zakres miał tutaj identyfikator with miał referencję do właściwości 'a' 
+    W przypadku o2: Tutaj zadziałało LHS jako, że nie było w Zakresie 'a'. Kontynuowało, aż do Zakresu Globalnego
+    (Kolejny przykład dlaczego powinno używać sie strict mode)
+    Przypomnienie: "use strict" -  nie pozwala na tworzenie globalnych zmiennych w powyższy sposób (przez przypadek)
+ */
+
 ```
+
+> Funkcja eval() modyfikuje już istniejący leksykalny Zakres.
+
+> Funkcja with() tworzy kompletnie nowy leksykalny Zakres z obiektu, który tam wrzucasz. 
+  
+Obie funkcje są już przestarzałe (ang. deprecated) i nie powinno się ich używać
+  
+### Ale dlaczego nie używać eval() lub with()? 
+
+Przecież można przez to zrobić bardziej elastyczny kod co w tym wielkiego, że będę używać tych funkcji? 
+
+Silnik javascriptu ma wiele mechanizmów optymalizacji, które wykonują się podczas kompilacji.
+Przykładowo Silnik identyfikuje gdzie znajdują się zmienne. W przypadku jak Silnik napotka 
+na deklarację eval() lub with() musi założyć, że wszystkie deklaracje zmiennych mogą być nieprawidłowe. 
+Dlatego też w takim wypadku Silnik nie wykonuje optymalizacji. Taki kod będzie działał
+znacząco wolniej. 
+
+Podsumowanie:
+Leksykalny Zakres - są to funkcje, zmienne zdefiniowane podczas pisania kodu. 
+
+Faza leksykalizcji (ang. lexing phase) - jest to w skrócie wiedza gdzie 
+są ulokowane identyfikatory (zmienne) i jak będą dostępne podczas wykanania kodu.
+   
+Dwa mechanizmy mogą oszukać Leksykalny Zakres eval() oraz with: 
+
+> Funkcja eval() modyfikuje już istniejący leksykalny Zakres. Może przykładowo dodac String z deklaracją zmiennej
+
+> Funkcja with() tworzy kompletnie nowy leksykalny Zakres z obiektu, który tam wrzucasz. Ważne robi to podczas run-time. Traktuje referencję do obiektu jako Zakres, a właściwości obiektu jako identyfikatory w danym zakresie.
+
+<b> Nie używać tych funkcji!</b> 
+
+- wykonanie programu jest przez to wolniejsze, gdyż Silnik nie używa optymalizacji wykonywanych podczas kompilacji. 
+
+# Funkcje vs Zakres Blokowy
 
 
