@@ -1,55 +1,55 @@
 # Czym jest zasięg?
 
 Podstawowym paradygmatem z jakim spotykamy się w praktycznie każdym języku jest pojęcie zmiennej. Jest to krytyczna część języków programowania. Pozwala
-na przechowywanie, modyfikowanie i pobieranie stanu naszej apliakcji. Istnieją pewne reguły, dzięki którym program odszukuje zmienne i nazywa się to zakresem. 
+na przechowywanie, modyfikowanie i pobieranie stanu naszej apliakcji. Istnieją pewne reguły, dzięki którym program odszukuje zmienne i nazywa się to zakresem.
 
 Javascript - język ten jest często określany mianem języka interpretowanego lub dynamicznego co nie do końca jest prawdą. W rzeczywistości jest to język kompilowany.
-Różnica polega na tym, że nie jest on kompilowany w taki sam sposób jak większość tradycyjnych języków jak przykładowo starszy brat Java. W tradycyjnym języku 
+Różnica polega na tym, że nie jest on kompilowany w taki sam sposób jak większość tradycyjnych języków jak przykładowo starszy brat Java. W tradycyjnym języku
 kod źródłowy programu przechodzi przez trzy kroki:
-1. Tokenizing/Lexing - podział ciągu tekstowego na tokeny. 
+1. Tokenizing/Lexing - podział ciągu tekstowego na tokeny.
 
 ```javascript
-    let x = 5; 
+    let x = 5;
 
 /*
     Powyższy program można podzielić na 5 części:
-    -> let 
-    -> x 
-    -> = 
-    -> 5 
+    -> let
+    -> x
+    -> =
+    -> 5
     -> ;
  */
 ```
 
-2. Parsing - pobranie tablicy tokenów i zamiana tego na drzewo zagnieżdżonych elementów AST (ang. Abstract Syntax Tree). 
+2. Parsing - pobranie tablicy tokenów i zamiana tego na drzewo zagnieżdżonych elementów AST (ang. Abstract Syntax Tree).
 
 ```javascript
-    let x = 5; 
+    let x = 5;
 
 /*
-    Tworzenie drzewa dla powyższego przykładu może wyglądać w następujący sposób od najwyższego poziomu węzła: 
-    - VariableDeclaration 
+    Tworzenie drzewa dla powyższego przykładu może wyglądać w następujący sposób od najwyższego poziomu węzła:
+    - VariableDeclaration
     - Identifier   
     - AssignmentExpression
     - NumericLiteral
  */
 ```
 
-3. Code-Generation - pobranie AST (ang. Abstract Syntax Tree) i zmienienie go na zbiór instrukcji maszynowych. 
-Jest to po prostu stworzenie zmiennej i zarezerwowanie miejsca w pamięci i przechowanie wartości w danej zmiennej. 
+3. Code-Generation - pobranie AST (ang. Abstract Syntax Tree) i zmienienie go na zbiór instrukcji maszynowych.
+Jest to po prostu stworzenie zmiennej i zarezerwowanie miejsca w pamięci i przechowanie wartości w danej zmiennej.
 
 Silnik Javascriptu jest bardziej skomplikowany niż powyższe kroki. W skrócie kod javascriptu jest kompilowany tuż przed jego uruchomieniem.
-Program bierze polecenie, kompiluje je i jest od razu gotowy do wykonania go. Wszystko to zajmuje ledwo kilka mikrosekund. 
+Program bierze polecenie, kompiluje je i jest od razu gotowy do wykonania go. Wszystko to zajmuje ledwo kilka mikrosekund.
 
 ##Zrozumieć zakres:
 
-Na początek podzielmy zakres na role jakie odgrywa: 
+Na początek podzielmy zakres na role jakie odgrywa:
 
 - Silnik (ang. Engine) - jest odpowiedzialny za kompilację i wykonianie naszego programu od początku do końca.
 - Kompilator (ang. Compiler) - powiązany z silnikiem. Zajmuje się brudną robotą, czyli generacją i analizą kodu. Jest to Parsing oraz Code-Generation (patrz poprzedni rozdział).
 - Zakres (ang. Scope) - również powiązany z silnikiem. Zbiera i przechowuje wszystkie zadeklarowane zmienne. Dodakowo determinuje ich dostępność w aktualnie wykonywanym kodzie.
 
-### Jak działa kompilator? 
+### Jak działa kompilator?
 
 ```javascript
 let a = 5;
@@ -61,16 +61,16 @@ let a = 5;
 > Podsumowując: Kompilator deklaruje zmienną o ile nie została wcześniej zadeklarowana
 
 2. Następnie kompilator produkuje kod dla Silnika, który jest
- potem przeznaczony do wykonania i jest odpowiedzialny za wykonanie przypisania do zmiennej wartości literalnej. 
-Kod wykonywany przez Silnik najpierw zapyta czy zmienna o podanej nazwie istnieje w bieżącym zakresie. 
+ potem przeznaczony do wykonania i jest odpowiedzialny za wykonanie przypisania do zmiennej wartości literalnej.
+Kod wykonywany przez Silnik najpierw zapyta czy zmienna o podanej nazwie istnieje w bieżącym zakresie.
 - if(true) - Silnik użyje zmiennej
 - else - Silnik zacznie szukać w innych miejscach. ( patrz dalej w podpunkcie: Zakres zagnieżdżony )
 > Podsumowując: Kompilator szuka zmiennej i przypisuje jej wartość
 
-## Jak działa kompilator? 
+## Jak działa kompilator?
 
 Silnik wykonuje kod, który kompilator wyprodukował. Szuka on potem zmiennej, którą
-konsultuje z Zakresem. 
+konsultuje z Zakresem.
 
 > LHS - szuka kontenera, gdzie może przypisać wartość
 Przypisanie może być poprzez operator równości lub jako parametr w funkcji
@@ -95,16 +95,16 @@ a = 2;
 ```
 
 #### Jak działa silnik? ~streszczenie krótki opis
-Silnik javascriptu na początku komiluje kod przed jego wykonaniem. Podczas tego 
+Silnik javascriptu na początku komiluje kod przed jego wykonaniem. Podczas tego
 rozdziela polecenie ``` var a = 2; ``` na dwa kroki
 - deklaracja ``` var a ``` w zakresie. To jest robione na początku przed wykonianiem kodu
 - przypisanie ``` a = 2 ``` (referencja LHS). Szuka zmiennej i jeśli znajdzie przypisuje wartość
 
-Szukanie RHS, które nie znajdzie referencji wyrzuca błąd ReferenceError 
+Szukanie RHS, które nie znajdzie referencji wyrzuca błąd ReferenceError
 
 Szukanie LHS, które nie znajdzie referencji automatycznie tworzy globalną zmienną. Można temu
 zapobieć poprzez zastosowanie "use strict"
- 
+
 
 ```javascript
 
@@ -115,9 +115,9 @@ foo( 2 );
 
 ```
 
-Silnik-Zakres: 
+Silnik-Zakres:
 - Silnik pyta Zakres o referencję RHS ``` foo() ```
-- Zakres odbiera od Kompilatora deklarację 
+- Zakres odbiera od Kompilatora deklarację
 - Silnik wykonuje funkcję
 - Silnik pyta Zakres o referencję LHS ``` a ```
 - Zakres obiera od Kompilatora deklarację ``` a ``` jako parametru funkcji
@@ -128,23 +128,23 @@ Silnik-Zakres:
 
 ## Zagnieżdżony Zakres
 
-Zakres - zestaw zasad, który szuka zmiennych. Zazwyczaj jest więcej niż jeden Zakres. 
+Zakres - zestaw zasad, który szuka zmiennych. Zazwyczaj jest więcej niż jeden Zakres.
 
-Jeśli funkcja jest zagniżdżona w innej funkcji i zmienna nie może być znaleziona 
+Jeśli funkcja jest zagniżdżona w innej funkcji i zmienna nie może być znaleziona
 w tej wewnętrznej funkcji Silnik przechodzi do kolejnego zewnętrznego Zakresu kontynuując to
 aż do Globalnego Zakresu.
 
-# Czym jest leksykalny zasięg? 
+# Czym jest leksykalny zasięg?
 
-Nazwa zmiennej, funkcji to inaczej nazwa identyfikatora 
+Nazwa zmiennej, funkcji to inaczej nazwa identyfikatora
 
 ```javascript
 
 /*
-    Są tutaj trzy zakresy: 
+    Są tutaj trzy zakresy:
     - zakres globalny - zawiera identyfikator foo
     - zakres foo - zawiera identyfikator a, b, bar
-    - zakres foo.bar - zawiera identyfikator c 
+    - zakres foo.bar - zawiera identyfikator c
  */
 
 function foo(a) {
@@ -157,7 +157,7 @@ function foo(a) {
     bar(b * 3);
 }
 
-foo( 2 ); // 2 4 12 
+foo( 2 ); // 2 4 12
 
 ```
 
@@ -165,23 +165,23 @@ foo( 2 ); // 2 4 12
 
 Założenie: Każda funkcja ma nowy 'bąbelek zakresu'
 
-Szukanie zmiennej jak w powyższym przykładzie zatrzymuje się zawsze w momencie jak 
+Szukanie zmiennej jak w powyższym przykładzie zatrzymuje się zawsze w momencie jak
 znajdzie zmienną. Przykładowo szukanie c zatrzymuje sie w bar i nie przechodzi do foo.
 Szukający to Silnik
 
-Globalne zmienne są automatycznie właściwościami globalnego obiektu ``` window ```. 
+Globalne zmienne są automatycznie właściwościami globalnego obiektu ``` window ```.
 Jest więc możliwe użycie właściwości obiektu zamiast leksykalnej nazwy.
 Przykład: ``` window.a ```
 
 ### Oszukanie leksykalne
 
-Zakres leksykalny to w skrócie zakres zdefiniowany przez autora gdzie mają się znajdywać funkcje. 
+Zakres leksykalny to w skrócie zakres zdefiniowany przez autora gdzie mają się znajdywać funkcje.
 W fazie lexing kompilacji jest wiadomo gdzie są wszystkie identyfikatory zadeklarowane i przewidziane jak będą wykonane
 
 Javascript ma dwa mechanizmy do modyfikacji leksykalnego zakresu podczas run-time.
-Niestety to tak zwane oszukiwanie prowadzi do spadku wydajności. 
+Niestety to tak zwane oszukiwanie prowadzi do spadku wydajności.
 
-Pierwsza funkcja to ``` eval(..) ``` bierze String jako argument. Możesz wygenerować kod w środku twojego kodu. 
+Pierwsza funkcja to ``` eval(..) ``` bierze String jako argument. Możesz wygenerować kod w środku twojego kodu.
 Pozwala to na modyfikację zakresu leksykalnego przez co możesz oszukać, ze jakiś kod był tam od początku.
 
 ```javascript
@@ -189,8 +189,8 @@ Pozwala to na modyfikację zakresu leksykalnego przez co możesz oszukać, ze ja
 /*
     str - definiuje za pomocą eval() zmienną b, modyfikując w ten sposób zakres leksykalny
     zmienna b zdefiniowana w Stringu nadpisuje zmienną b=2 z zasięgu globalnego
-    
-    w przypadku użycia let nie działa tak samo 
+
+    w przypadku użycia let nie działa tak samo
  */
 
 function foo(str, a) {
@@ -204,8 +204,8 @@ foo( "var b = 3;", 1 ); // 1 3
 
 ```
 
-Kolejną funkcją jest ``` with() ```. Tworzy kilka referencji właściwości obiektu bez 
-konieczności powtarzania referencji obiektu kilka razy. 
+Kolejną funkcją jest ``` with() ```. Tworzy kilka referencji właściwości obiektu bez
+konieczności powtarzania referencji obiektu kilka razy.
 
 ```javascript
 
@@ -267,7 +267,7 @@ console.log( o2.a ); // undefined
 console.log( a ); // 2 -- Oops, leaked global!
 
 /*
-    W przypadku o1: Zakres miał tutaj identyfikator with miał referencję do właściwości 'a' 
+    W przypadku o1: Zakres miał tutaj identyfikator with miał referencję do właściwości 'a'
     W przypadku o2: Tutaj zadziałało LHS jako, że nie było w Zakresie 'a'. Kontynuowało, aż do Zakresu Globalnego
     (Kolejny przykład dlaczego powinno używać sie strict mode)
     Przypomnienie: "use strict" -  nie pozwala na tworzenie globalnych zmiennych w powyższy sposób (przez przypadek)
@@ -277,53 +277,53 @@ console.log( a ); // 2 -- Oops, leaked global!
 
 > Funkcja eval() modyfikuje już istniejący leksykalny Zakres.
 
-> Funkcja with() tworzy kompletnie nowy leksykalny Zakres z obiektu, który tam wrzucasz. 
-  
-Obie funkcje są już przestarzałe (ang. deprecated) i nie powinno się ich używać
-  
-### Ale dlaczego nie używać eval() lub with()? 
+> Funkcja with() tworzy kompletnie nowy leksykalny Zakres z obiektu, który tam wrzucasz.
 
-Przecież można przez to zrobić bardziej elastyczny kod co w tym wielkiego, że będę używać tych funkcji? 
+Obie funkcje są już przestarzałe (ang. deprecated) i nie powinno się ich używać
+
+### Ale dlaczego nie używać eval() lub with()?
+
+Przecież można przez to zrobić bardziej elastyczny kod co w tym wielkiego, że będę używać tych funkcji?
 
 Silnik javascriptu ma wiele mechanizmów optymalizacji, które wykonują się podczas kompilacji.
-Przykładowo Silnik identyfikuje gdzie znajdują się zmienne. W przypadku jak Silnik napotka 
-na deklarację eval() lub with() musi założyć, że wszystkie deklaracje zmiennych mogą być nieprawidłowe. 
+Przykładowo Silnik identyfikuje gdzie znajdują się zmienne. W przypadku jak Silnik napotka
+na deklarację eval() lub with() musi założyć, że wszystkie deklaracje zmiennych mogą być nieprawidłowe.
 Dlatego też w takim wypadku Silnik nie wykonuje optymalizacji. Taki kod będzie działał
-znacząco wolniej. 
+znacząco wolniej.
 
 Podsumowanie:
-Leksykalny Zakres - są to funkcje, zmienne zdefiniowane podczas pisania kodu. 
+Leksykalny Zakres - są to funkcje, zmienne zdefiniowane podczas pisania kodu.
 
-Faza leksykalizcji (ang. lexing phase) - jest to w skrócie wiedza gdzie 
+Faza leksykalizcji (ang. lexing phase) - jest to w skrócie wiedza gdzie
 są ulokowane identyfikatory (zmienne) i jak będą dostępne podczas wykanania kodu.
-   
-Dwa mechanizmy mogą oszukać Leksykalny Zakres eval() oraz with: 
+
+Dwa mechanizmy mogą oszukać Leksykalny Zakres eval() oraz with:
 
 > Funkcja eval() modyfikuje już istniejący leksykalny Zakres. Może przykładowo dodac String z deklaracją zmiennej
 
 > Funkcja with() tworzy kompletnie nowy leksykalny Zakres z obiektu, który tam wrzucasz. Ważne robi to podczas run-time. Traktuje referencję do obiektu jako Zakres, a właściwości obiektu jako identyfikatory w danym zakresie.
 
-<b> Nie używać tych funkcji!</b> 
+<b> Nie używać tych funkcji!</b>
 
-- wykonanie programu jest przez to wolniejsze, gdyż Silnik nie używa optymalizacji wykonywanych podczas kompilacji. 
+- wykonanie programu jest przez to wolniejsze, gdyż Silnik nie używa optymalizacji wykonywanych podczas kompilacji.
 
 # Funkcje vs Zakres Blokowy
 
 Na początek przypomnienie wszystkie funkcje tworzą swoje własne Zakresy. Każda funkcja, którą zdeklarujesz
-tworzy własny Zakres. Przykładowy kod: 
+tworzy własny Zakres. Przykładowy kod:
 
 ```javascript
 
 /*
-    Zakres foo() zawiera 'a' 'b' 'c' 
+    Zakres foo() zawiera 'a' 'b' 'c'
     Zakres bar() ma swój własny zakres, ale może korzystać foo() i globalnego
     Tip: nie ma różnicy gdzie deklaracja zmiennej się pojawia
-    
+
 */
 
 function foo(a) {
     var b = 2;
-    
+
     function bar() {
         // ...
     }
@@ -334,9 +334,9 @@ function foo(a) {
 
 #### Ukrywanie się w zwykłym zakresie
 
-"Principle of Least Privilege" - Software design principle 
-> Projektując API dla modułów powinno się odkrywać tylko najpotrzebniejsze rzeczy, 
-a wszystko inne ukrywać. Przykład: 
+"Principle of Least Privilege" - Software design principle
+> Projektując API dla modułów powinno się odkrywać tylko najpotrzebniejsze rzeczy,
+a wszystko inne ukrywać. Przykład:
 
 ```javascript
 
@@ -358,7 +358,7 @@ makeCalculation( 2 ); // 21
 
 /*
     Poniżej ta sama implementacja w bardziej prawidłowy sposób.
-    W tym przypadku wewnętrzna funkcja jest ukryta. 
+    W tym przypadku wewnętrzna funkcja jest ukryta.
     Wszystko co znajduje sie w doSomething() nie jest dostępne poza makeCalculation()
 */
 
@@ -379,3 +379,21 @@ makeCalculation( 2 ); // 15
 
 #### Unikanie kolizji (ang. Collision Avoidance)
 
+Inną korzyścią ukrywanie zmiennych jest uniknięcie kolizji pomiędzy takimi samymi nazwami zmiennych.
+
+```javascript
+
+function foo() {
+    function bar(a) {
+        i = 3;
+        console.log( a + i );
+    }
+
+    for (var i=0; i<10; i++) {
+        bar( i * 2 ); // infinite loop
+    }
+}
+
+foo();
+
+```
