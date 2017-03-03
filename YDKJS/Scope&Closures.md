@@ -385,15 +385,38 @@ Inną korzyścią ukrywanie zmiennych jest uniknięcie kolizji pomiędzy takimi 
 
 function foo() {
     function bar(a) {
-        i = 3;
+        i = 10; // Aby zatrzymać pętlę wystarczy stworzyć deklarację var i = 10
         console.log( a + i );
     }
 
-    for (var i=0; i<10; i++) {
-        bar( i * 2 ); // infinite loop
+    for (var i=0; i<100; i++) {
+        bar( i * 2 ); // nieskończona pętla
     }
 }
 
 foo();
 
 ```
+
+#### Globalne przestrzeni nazw 
+
+Kolejnym przykładem kolizji może być kiedy tworzysz zmienne w Zakresie globalnym.
+Zamiast tworzyć pojedyńcze identyfikatory zmiennych można stworzyć obiekt w którym przechowujemy 
+właściwości naszej aplikacji. Przykład: 
+
+```javascript
+
+var lib = {
+    URL: "google.com",
+    browseWeb: function() {
+        // content
+    }, 
+    search: "cat" 
+};
+
+```
+
+### Funkcje jako Zakresy
+
+Zamiast zaśmiecać przesrzeni nazw funkcji możemy stworzyć funkcję, która wykonuje się automatycznie.
+
