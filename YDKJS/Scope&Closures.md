@@ -515,9 +515,6 @@ var yourLibraryWhatever = {
 })( yourLibraryWhatever ); // można przykładowo odwołac się do swojej biblioteki
 console.log( a ); // 2
 
-/*
-    
- */
-
 ```
 
+### Blok jako Zakres
