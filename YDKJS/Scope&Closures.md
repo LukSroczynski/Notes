@@ -466,4 +466,58 @@ Podsumowując dobrą praktyką jest nadanie nazwy funkcji przez co powyższe wad
 
 ### Invoking Function Expressions Immediately
 
+Trochę o wzorcu IIFE - Immediately Invoked Function Expression.
+Dobrą praktyką podczas tworzenia IIFE jest nadanie nazwy 'IIFE' do wyrażenia funkcji.
+
+```javascript
+
+/*
+    Istnieją też inne formy deklaracji takiego wyrażenia funkcji.
+    Funkcjonalnie działają tak samo różnica jest tylko w stylistyce.
+ */
+
+var a = 2;
+(function IIFE(){
+    var a = 3;
+    console.log( a ); // 3
+})(); // TUTAJ  !
+console.log( a ); // 2
+
+var a = 2;
+(function IIFE(){
+    var a = 3;
+    console.log( a ); // 3
+}()); // TUTAJ !
+console.log( a ); // 2
+
+
+/*
+    Kolejny popularnym sposobem na IIFE jest podanie parametrów.
+    Dzięki temu widzimy, która zmienna ma zasięg globalny.
+ */
+
+var a = 2;
+(function IIFE( global ){
+    var a = 3;
+    console.log( a ); // 3
+    console.log( global.a ); // 2
+})( window ); // robimy odwołanie do obiektu window
+console.log( a ); // 2
+
+var yourLibraryWhatever = {
+    very: "important",
+    lib: "lib"
+};
+(function IIFE( global ){
+    var a = 3;
+    console.log( a ); // 3
+    console.log( global.a ); // 2
+})( yourLibraryWhatever ); // można przykładowo odwołac się do swojej biblioteki
+console.log( a ); // 2
+
+/*
+    
+ */
+
+```
 
