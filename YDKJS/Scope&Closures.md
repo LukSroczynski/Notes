@@ -418,5 +418,52 @@ var lib = {
 
 ### Funkcje jako Zakresy
 
-Zamiast zaśmiecać przesrzeni nazw funkcji możemy stworzyć funkcję, która wykonuje się automatycznie.
+Zamiast zaśmiecać przestrzeń nazw funkcji możemy stworzyć funkcję, która wykonuje się automatycznie.
+
+```javascript
+
+/*
+    IIFE -  Immediately Invoked Function Expression
+    W przypadku jak poniżej kiedy funkcja jest w nawiasach () nazywamy to wyrażeniem funkcji ( ang. function expression  )
+    Wyrażenie funkcji tworzy swój zakres, ale nie udostępnia siebie dla Zakresu nadrzędnego, więc funkcja jest dostępna we własnym zakresie.
+    Czyli identyfikator foo() jest dostępny tylko w Zakresie funkcji, a nie jest w zewnętrznym
+    Wynik jest taki, że funkcja jest automatycznie wykonywana i nie jest zaśmiecana zewnętrzna przestrzeń nazw
+ */
+
+var a = 2;
+
+(function foo(){ 
+
+    var a = 3;
+    console.log( a ); // 3
+
+})();
+
+console.log( a ); // 2
+
+/*
+    Wyrażenie funkcji może być anonimowe, czyli nie musi posiadać nazwy.
+    Wyrażenie funkcji może mieć nazwę.
+    Deklaracja funkcji nie może pomijać nazwy funkcji.
+ */
+
+setTimeout( function(){
+    console.log("I waited 1 second!");
+}, 1000 );
+
+setTimeout( function timeoutHandler(){ 
+    console.log( "I waited 1 second!" );
+}, 1000 );
+```
+
+Wady stosowania anonimowych wyrażeń bez nazwy: 
+- nie mają nazw wyświetlanych w stosie (ang. stack traces), przez co debuggowanie staje się trudniejsze
+- funkcja bez nazwy nie ma jak odwołać się do samej siebie, aby przykładowo zastosować rekurencję. Możliwe jest zastosowanie przestarzałej (ang. deprecated ) 
+metody ``` arguments.callee ``` 
+- ostatnią rzeczą jest czytelność kodu. Bez nazwy nie wiadomo jaki był zamysł metody, nazwana metoda pomaga dokumentować kod. 
+
+Podsumowując dobrą praktyką jest nadanie nazwy funkcji przez co powyższe wady znikają.
+
+### Invoking Function Expressions Immediately
+
 
