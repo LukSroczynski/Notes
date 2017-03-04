@@ -518,3 +518,35 @@ console.log( a ); // 2
 ```
 
 ### Blok jako Zakres
+
+```javascript
+
+/*
+    Wartość przetrwała pętlę for, jeśli chcielibyśmy aby zmienna i nie była dostępna moglibyśmy wrzucić pętlę do funkcji
+ */
+
+    for (var i=0; i<10; i++) {
+        console.log( i ); // 123456789
+    }
+    console.log( i ); // 10
+    
+/*
+    W konstrukcji try/catch zasięg bloku catch jest ograniczony do tego bloku
+*/
+
+try {
+    undefined(); 
+}
+catch (err) {
+    console.log( err ); 
+}
+
+console.log( err ); // ReferenceError: `err` not found
+
+
+```
+
+### Słowa kluczowe przedstawione w ES6
+
+1. let - 
+
