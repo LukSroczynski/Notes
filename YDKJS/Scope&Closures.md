@@ -546,7 +546,111 @@ console.log( err ); // ReferenceError: `err` not found
 
 ```
 
-### Słowa kluczowe przedstawione w ES6
+## Hoisting - continuation
 
-1. let - 
+Hoisting - jest dla Zasięgu.
+```javascript
+
+var foo;
+foo(); // TypeError
+bar(); // ReferenceError
+foo = function() {
+    var bar = ...
+}
+
+```
+
+Najpierw funkcje są hoisted, potem dopiero zmienne. 
+
+```javascript
+
+foo(); // 1
+var foo;
+function foo() {
+    console.log( 1 );
+}
+foo = function() {
+    console.log( 2 );
+};
+
+```
+
+Dobrze jest też pomijać deklarację funkcji w blokach, gdyż zamisat być wyrażeniem warunkowym, funkcja 
+po prostu zwraca ostatnią zdefiniowaną przetwrzoną przez Silnik
+
+```javascript 
+
+foo(); // "b"
+
+var a = true;
+if (a) {
+   function foo() { console.log( "a" ); }
+}
+else {
+   function foo() { console.log( "b" ); }
+}
+
+```
+
+Podsumowując deklaracje są hoisted, ale przypisania, wyrażenia funkcji nie są hoisted. 
+
+# Zakres - Domknięcie
+
+Domknięcie (ang. Closure ) - jest wtedy kiedy funkcja może mieć dostęp do swojego leksykalnego zakresu,
+nawet kiedy jest wykonywana w innym miejscu.
+
+```javascript 
+
+function foo() {
+    var a = 2;
+
+    function bar() {
+        console.log( a );
+    }
+
+    return bar;
+}
+
+var baz = foo();
+
+baz(); // 2 <- closure
+
+```
+
+Przykład domknięcia dla for-loop: 
+
+```javascript
+
+for (var i=1; i<=5; i++) {
+    setTimeout( function timer(){
+        console.log( i );
+    }, i*1000 ); // i * 1000, żeby był efekt wykonywania się po kolei 
+} 
+
+// 6x output: 6 
+
+for (var i=1; i<=5; i++) {
+    (function(j){ // Tworzy nowy Zasięg za każdym razem
+        setTimeout( function timer(){ 
+            console.log( j );
+        }, j*1000 );
+    })( i );
+}
+
+// output: 1,2,3,4,5,6
+
+
+/*
+    w tym przypadku najlepiej jest użyć let'a
+ */
+
+for (let i=1; i<=5; i++) {
+    setTimeout( function timer(){
+        console.log( i );
+    }, i*1000 );
+}
+
+```
+
+
 
