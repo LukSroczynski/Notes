@@ -548,5 +548,98 @@ console.log( err ); // ReferenceError: `err` not found
 
 ### Słowa kluczowe przedstawione w ES6
 
-1. let - 
+1. let - pozwala dołączyć zmienną do bloku funkcji. Jest to Zakres bloku, który działa tak samo jak w innych językach programowania. Jest to po prostu bardziej intuicyjne.
+2. const - jest to podobne do let'a z taką różnicą, że jego wartość jest stała (ang. fixed or constant)
+
+
+### Garbage Collector
+
+```javascript
+
+/*
+    W poniższym przypadku obiekt someReallyBigData nie zostanie usunięty z pamięci, mimo, że nie jest używany w późniejszym kodzie
+ */
+
+function process(data) {
+    // do something interesting
+}
+
+var someReallyBigData = { .. };
+
+process( someReallyBigData );
+
+var btn = document.getElementById( "my_button" );
+
+btn.addEventListener( "click", function click(evt){
+    console.log("button clicked");
+}, /*capturingPhase=*/false );
+
+/*
+    W drugim przykładzie someReallyBigData jest w Zakresie blokowym przez co zostanie usunięty po wykonianiu
+ */
+
+function process(data) {
+    // do something interesting
+}
+
+// anything declared inside this block can go away after!
+{
+    let someReallyBigData = { .. };
+
+    process( someReallyBigData );
+}
+
+var btn = document.getElementById( "my_button" );
+
+btn.addEventListener( "click", function click(evt){
+    console.log("button clicked");
+}, /*capturingPhase=*/false );
+
+```
+
+# Hoisting
+
+Jest to użycie zmiennej przed jej zdefiniowaniem.
+
+```javascript
+
+/*
+    Z cyklu dziwności JS'a  (tak naprawdę Silnika)
+ */
+ a = 2;
+ var a;
+ console.log( a ); // output: 2
+ 
+ /* --------------- */
+ 
+ console.log( a ); // output: undefined
+ var a = 2;
+ 
+ /*
+ 
+    Najpierw przeczytaj opis pod kodem źródłowym następnie wróć tutaj: 
+    
+    Pierwszy przykład: 
+    1. var a; 
+    2. a = 2; 
+    3. console.log( a ); // output: 2
+    
+    Drugi przykład:
+    1. var a; // a = undefined
+    2. console.log( a ); // output: 2
+    3. a = 2; // dopiero teraz a = 2
+  
+  */
+ 
+ 
+```
+
+Mogłoby się wydawać, że wykonanie programu idzie od góry do dołu i tak jest w większości przypadków. Co tutaj się stało? 
+
+Cofnijmy sie do Silnika i Kompilatora. Silnik kompiluje kod przed interpretowaniem go. Częścią kompliacji jest znalezienie wszystkich deklaracji. 
+Tak więc pierw wszystkie zmienne i funkcje są przetworzone, a dopiero potem kod jest wykonywany. 
+
+Kiedy widzisz ``` var a = 2 ``` javascript widzi to jako dwie rzeczy:
+- Deklarację zmiennej ```var a;``` - To jest przetwarzane podczas kompilacji
+- Przypisanie wartości do zmiennej ``` a = 2;``` -  To jest przetwarzane podczas wykonania kodu
 
