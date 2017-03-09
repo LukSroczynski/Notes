@@ -652,5 +652,118 @@ for (let i=1; i<=5; i++) {
 
 ```
 
+### Module Pattern
+
+Najbardziej popularny wzorzec, który jest również nazywany (ang. Revealing Module). 
+
+```javascript
+
+function CoolModule() {
+    var something = "cool";
+    var another = [1, 2, 3];
+
+    function doSomething() {
+        console.log( something );
+    }
+
+    function doAnother() {
+        console.log( another.join( " ! " ) );
+    }
+
+    return {
+        doSomething: doSomething,
+        doAnother: doAnother
+    };
+}
+
+var foo = CoolModule();
+
+foo.doSomething(); // cool
+foo.doAnother(); // 1 ! 2 ! 3
+
+/*
+    Działanie modułu: 
+    1. Na początek trzeba wywołać funkcję CoolModule().
+    2. Kolejno funkcja zwraca obiekty jako HashMap (Key: Value).
+    3. Przypisujemy obiekt do zmiennej i możemy za jej pomocą dostać się do właściwości obiektu.
+ */
+
+/*
+    Lekka zmmiana: kiedy chcesz mieć tylko jedną instancję, podobnie jak we wzorcu: "singleton"
+*/
+var foo = (function IIFE() {
+    var something = "cool";
+    var another = [1, 2, 3];
+
+    function doSomething() {
+        console.log( something );
+    }
+
+    function doAnother() {
+        console.log( another.join( " ! " ) );
+    }
+
+    return {
+        doSomething: doSomething,
+        doAnother: doAnother
+    };
+})();
+
+foo.doSomething(); // cool
+foo.doAnother(); // 1 ! 2 ! 3
+
+/*
+    Moduły są funkcjami więc mogą również otrzymywać parametry
+*/
+
+function CoolModule(id) {
+    function identify() {
+        console.log( id );
+    }
+
+    return {
+        identify: identify
+    };
+}
+
+var foo1 = CoolModule( "foo 1" );
+var foo2 = CoolModule( "foo 2" );
+
+foo1.identify(); // "foo 1"
+foo2.identify(); // "foo 2"
+
+/*
+    Kolejnym przykładem modułu jest zrobienie obiektu w funkcji i zwrócenie go.
+    Poprzez utworzenie obiektu w ten sposób otrzymujemy możliwość jego modyfikacji.
+ */
+
+var foo = (function CoolModule(id) {
+    function change() { // modyfikuje publicAPI
+        publicAPI.identify = identify2;
+    }
+
+    function identify1() {
+        console.log( id );
+    }
+
+    function identify2() {
+        console.log( id.toUpperCase() );
+    }
+
+    var publicAPI = {
+        change: change,
+        identify: identify1 // ta właścwość jest zmieniana podczas wywołania change()
+    };
+
+    return publicAPI;
+})( "foo module" );
+
+foo.identify(); // foo module
+foo.change();   // modyfikuje publicAPI
+foo.identify(); // FOO MODULE
+
+```
+
+### Modern Modules
 
 
