@@ -33,4 +33,6 @@ Subsequent sections discuss scenarios, as well as provide a breakdown of the HTT
 
 # [Objectives - development path](https://forum.freecodecamp.com/t/computer-guide-web-development-with-computer-science-foundations-comprehensive-path/64516)
 
+## Full-stack
+https://www.youtube.com/watch?annotation_id=annotation_658518549&feature=iv&src_vid=MCiUwO8QQ8E&v=sbB6552U3m0
 
