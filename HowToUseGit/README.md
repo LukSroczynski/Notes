@@ -1,3 +1,14 @@
+#Most useful commands
+
+https://git-scm.com/book/en/v2
+
+http://stackoverflow.com/questions/8196544/what-are-the-git-concepts-of-head-master-origin
+
+https://www.youtube.com/watch?v=FyfwLX4HAxM&list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-
+
+https://guides.github.com/activities/hello-world/
+
+
 #How To Use Git / GitHub
 
 <h4>Useful tips: </h4>
@@ -23,9 +34,9 @@ https://dev.to/gonedark/3-git-commands-i-use-every-day
   git add <file or .>
 ```
 
-> <b> git add * </b> means add all files in the current directory, except for files, whose name begin with a dot. This is your shell 
+> <b> git add * </b> means add all files in the current directory, except for files, whose name begin with a dot. This is your shell
 > functionality, actually, Git only receives a list of files. <br>
-> <b> git add . </b> though, has no special meaning in your shell, and Git add the entire directory recursively, which is basically the 
+> <b> git add . </b> though, has no special meaning in your shell, and Git add the entire directory recursively, which is basically the
 > same, but it also adds files whose name begin with a dot.
 
 ```
@@ -52,7 +63,7 @@ https://dev.to/gonedark/3-git-commands-i-use-every-day
 ```
   git status -s
   git status --short
-``` 
+```
 >> Shows a short-format output.
 
 ```

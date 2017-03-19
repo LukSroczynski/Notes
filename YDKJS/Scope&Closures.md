@@ -546,100 +546,111 @@ console.log( err ); // ReferenceError: `err` not found
 
 ```
 
-### Słowa kluczowe przedstawione w ES6
+## Hoisting - continuation
 
-1. let - pozwala dołączyć zmienną do bloku funkcji. Jest to Zakres bloku, który działa tak samo jak w innych językach programowania. Jest to po prostu bardziej intuicyjne.
-2. const - jest to podobne do let'a z taką różnicą, że jego wartość jest stała (ang. fixed or constant)
-
-
-### Garbage Collector
-
+Hoisting - jest dla Zasięgu.
 ```javascript
 
-/*
-    W poniższym przypadku obiekt someReallyBigData nie zostanie usunięty z pamięci, mimo, że nie jest używany w późniejszym kodzie
- */
-
-function process(data) {
-    // do something interesting
+var foo;
+foo(); // TypeError
+bar(); // ReferenceError
+foo = function() {
+    var bar = ...
 }
-
-var someReallyBigData = { .. };
-
-process( someReallyBigData );
-
-var btn = document.getElementById( "my_button" );
-
-btn.addEventListener( "click", function click(evt){
-    console.log("button clicked");
-}, /*capturingPhase=*/false );
-
-/*
-    W drugim przykładzie someReallyBigData jest w Zakresie blokowym przez co zostanie usunięty po wykonianiu
- */
-
-function process(data) {
-    // do something interesting
-}
-
-// anything declared inside this block can go away after!
-{
-    let someReallyBigData = { .. };
-
-    process( someReallyBigData );
-}
-
-var btn = document.getElementById( "my_button" );
-
-btn.addEventListener( "click", function click(evt){
-    console.log("button clicked");
-}, /*capturingPhase=*/false );
 
 ```
 
-# Hoisting
-
-Jest to użycie zmiennej przed jej zdefiniowaniem.
+Najpierw funkcje są hoisted, potem dopiero zmienne. 
 
 ```javascript
 
-/*
-    Z cyklu dziwności JS'a  (tak naprawdę Silnika)
- */
- a = 2;
- var a;
- console.log( a ); // output: 2
- 
- /* --------------- */
- 
- console.log( a ); // output: undefined
- var a = 2;
- 
- /*
- 
-    Najpierw przeczytaj opis pod kodem źródłowym następnie wróć tutaj: 
-    
-    Pierwszy przykład: 
-    1. var a; 
-    2. a = 2; 
-    3. console.log( a ); // output: 2
-    
-    Drugi przykład:
-    1. var a; // a = undefined
-    2. console.log( a ); // output: 2
-    3. a = 2; // dopiero teraz a = 2
-  
-  */
- 
- 
+foo(); // 1
+var foo;
+function foo() {
+    console.log( 1 );
+}
+foo = function() {
+    console.log( 2 );
+};
+
 ```
 
-Mogłoby się wydawać, że wykonanie programu idzie od góry do dołu i tak jest w większości przypadków. Co tutaj się stało? 
+Dobrze jest też pomijać deklarację funkcji w blokach, gdyż zamisat być wyrażeniem warunkowym, funkcja 
+po prostu zwraca ostatnią zdefiniowaną przetwrzoną przez Silnik
 
-Cofnijmy sie do Silnika i Kompilatora. Silnik kompiluje kod przed interpretowaniem go. Częścią kompliacji jest znalezienie wszystkich deklaracji. 
-Tak więc pierw wszystkie zmienne i funkcje są przetworzone, a dopiero potem kod jest wykonywany. 
+```javascript 
 
-Kiedy widzisz ``` var a = 2 ``` javascript widzi to jako dwie rzeczy:
-- Deklarację zmiennej ```var a;``` - To jest przetwarzane podczas kompilacji
-- Przypisanie wartości do zmiennej ``` a = 2;``` -  To jest przetwarzane podczas wykonania kodu
+foo(); // "b"
+
+var a = true;
+if (a) {
+   function foo() { console.log( "a" ); }
+}
+else {
+   function foo() { console.log( "b" ); }
+}
+
+```
+
+Podsumowując deklaracje są hoisted, ale przypisania, wyrażenia funkcji nie są hoisted. 
+
+# Zakres - Domknięcie
+
+Domknięcie (ang. Closure ) - jest wtedy kiedy funkcja może mieć dostęp do swojego leksykalnego zakresu,
+nawet kiedy jest wykonywana w innym miejscu.
+
+```javascript 
+
+function foo() {
+    var a = 2;
+
+    function bar() {
+        console.log( a );
+    }
+
+    return bar;
+}
+
+var baz = foo();
+
+baz(); // 2 <- closure
+
+```
+
+Przykład domknięcia dla for-loop: 
+
+```javascript
+
+for (var i=1; i<=5; i++) {
+    setTimeout( function timer(){
+        console.log( i );
+    }, i*1000 ); // i * 1000, żeby był efekt wykonywania się po kolei 
+} 
+
+// 6x output: 6 
+
+for (var i=1; i<=5; i++) {
+    (function(j){ // Tworzy nowy Zasięg za każdym razem
+        setTimeout( function timer(){ 
+            console.log( j );
+        }, j*1000 );
+    })( i );
+}
+
+// output: 1,2,3,4,5,6
+
+
+/*
+    w tym przypadku najlepiej jest użyć let'a
+ */
+
+for (let i=1; i<=5; i++) {
+    setTimeout( function timer(){
+        console.log( i );
+    }, i*1000 );
+}
+
+```
+
+
 
