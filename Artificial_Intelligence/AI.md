@@ -3,3 +3,6 @@
 [3. Link](https://www.reddit.com/r/Futurology/wiki/books)
 [4. Link](znalezcMiejsceMiędzyEuforiąASmutkiem)
 
+##Fajne filmiki:
+
+https://www.youtube.com/watch?v=PRdcZSuCpNo

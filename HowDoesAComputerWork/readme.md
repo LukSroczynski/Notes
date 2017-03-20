@@ -16,13 +16,16 @@ Oprogramowaniem w tym przypadku jest OS, które zarządza limitowanymi zasobami 
 
 Poniżej przydatne linki: 
 
-Wytłumaczone wszystkie elementy komputera: 
+Wytłumaczone wszystkie elementy komputera:
+
 https://www.youtube.com/playlist?list=PLVpAurZqkV65xG1dsDjHWIF9Em1d-vhnw
 
 Overview: 
 
-Pierwsza część: 
+Pierwsza część:
+
 https://www.youtube.com/watch?v=rVB_zCBrgXI&t=560s
 
-Druga część: 
+Druga część:
+
 https://www.youtube.com/watch?v=kA_L_MaEQsc
