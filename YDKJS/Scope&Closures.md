@@ -764,6 +764,57 @@ foo.identify(); // FOO MODULE
 
 ```
 
-### Modern Modules
+### Domknicie w skrócie: 
+
+```javascript
+
+/**
+*   Funkcja wykonuje się i w normalnym przypadku zmienna a byłaby wyczyszczona. 
+*   Jednakże jest jeśli zwrócimy wewnętrzną funkcję i przypiszemy to do zmiennej w tym 
+*   przypadku 'fnc' zmienna 'a' będzie istnieć tak długo jak funkcja istnieje
+*      
+*/
+outer = function() {
+  var a = 1;
+  var inner = function() {
+    console.log(a);
+  }
+  return inner; // this returns a function
+}
+
+var fnc = outer(); // execute outer to get inner 
+fnc();
+
+```
+
+## Dynamic scope - dynamiczny zakres
+
+Jak wcześniej było wspomniane leksykalny zakres jest zbiorem zasad jak silnik szuka i znajduje zmienne.
+Charakterystyczne dla zakresu leksyklanego jest to, że jest zdefiniowany podczas napisanego kodu przez programiste. 
+Można to oszukać poprzez eval() oraz with. 
+Leksykalny zakres obchodzi gdzie funkcja została zadeklarowana, a dynamiczny, gdzie funkcja została wywołana.
+
+## Polyfilling Block Scope 
+
+```javascript
+
+{
+    let a = 2;
+    console.log( a ); // 2
+}
+
+console.log( a ); // ReferenceError
+
+/**
+*   Tak samo funkcjonalnu kod w pre-ES6
+*/
+
+try{throw 2}catch(a){
+    console.log( a ); // 2
+}
+
+console.log( a ); // ReferenceError
+
+```
 
 

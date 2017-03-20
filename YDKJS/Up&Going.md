@@ -28,7 +28,11 @@ Prototypes -
 
 Coercion - 
 
+## Chap 1 
 
+W internecie można znaleźć mnóstwo tutoriali, w których jest wytłumaczony język Javascript. Wpis ten należy 
+traktować jako podsumowanie serii YDKJS. Przedstawiłem tutaj tylko pojęcia, które były według mnie najbardziej istotne.
+Będzie to swego rodzaju notatnik, który będzie służyć jako referencja do najważniejszych pojęć. 
 
 ## Chapter 2
 
