@@ -64,3 +64,66 @@ MyApp.java - main method
 BaseballCoach.java - simple implementation
 Coach.java - interface after refactoring
 TrackCoach.java - switch coaches and see that app still works
+
+### Inversion of Control - configuration
+
+Spring (Inversion of Control) -
+
+Object Factory (Spring) -> (give me object based on configuration file)
+Configuration ->
+- BaseballCoach, Hockeycoach, TrackCoach
+
+### Spring Container - Primary Functions
+- Create and manage objects (Inversion of Control)
+- Inject object's dependencies (Dependency Injection)
+
+### Configure Spring Conteiner - There is 3 ways to do that
+- XML configuration file (legacy, but most legacy apps still use this). It was used when Spring first came out
+
+- Java Annotations (Modern)
+
+- Java Source Code (Modern)
+
+## <b> Spring Development Process (Step-By-Step) </b>
+1. Configure Spring beans.
+2. Create Spring Container.
+3. Retrieve beans from Spring Container
+
+#### Step 1: Configure you Spring Beans
+
+File: <b> applicationContext.xml </b>
+
+```java
+
+<beans ...>
+
+  <bean id="myCoach"  //id is for Java Application to Retrieve a bean from spring container
+    class="spring.demo.coaches.BaseballCoach">
+  </bean>
+
+</beans>
+
+```
+
+#### Step 2: Create a Spring Container
+- Spring container is generically known as ApplicationContext
+
+ApplicationContext - is a central interface that provide configuration information to the application.
+It's a read-only at run time, but can be re-loaded if nessasery.
+
+Application Context provide:
+- beans factory methods to access application compoents
+- ability to load file resources in generic fashion
+- ability to publish events to registered listeners
+- ability to resolve messages to support internationalization
+- inheritance from parent context
+
+Specialized implementations: 
+- ClassPathXmlApplicationContext
+- - AnnotationConfigApplicationContext
+- GenericWebApplicationContext
+- Others...
+
+```java
+  ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+```
