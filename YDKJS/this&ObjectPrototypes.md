@@ -57,10 +57,10 @@ Im bardziej skomplikowany jest twój wzorzec tym bardziej zobaczysz, że stosowa
 jawnych (ang. explicit) parametrów jest niechlujne. W dalszej części wpisu będzie pokazana przydatność
 funkcji, która automatycznie zawiera referencję do obiektu. 
 
-## Czy ```this```  działa tak jak myślisz, że działa? 
+## Jesteś pewien, że wiesz jak działa ```this``` ? 
 
 Sama nazwa ```this```  jest często myląca przez co programiści, myślą o tym zbyt dosłownie.
-Pierwszym błędem jest myślenie o ```this``` jako o referencji do funkcji samej w sobie.
+Pierwszym błędem jest myślenie o ```this``` jako o referencji do funkcji samej w sobie. Jest to błędne założenie. 
 Przykładem może być rekurencja, czyli kiedy funkcja wywołuje samą siebie. 
 
 ```javascript
@@ -101,4 +101,6 @@ for (i=0; i<10; i++) {
 console.log( foo.count ); // 0 -- WTF?
 
 ```
+
+
 
