@@ -72,11 +72,19 @@ function foo(num) {
 	this.count++; // to nie zadziała, a w dodatku stworzy nam globalną zmienna count 
 	
 	/**
-	*  To zadziała: 
-	*  this.foo.count++; 
+	*  To nie zadziała: 
+	*  this.count++;
+	*  W tym przypadku jest tworzona zmienna globalna. 
+	*  Wstępnie jest ona undefinied przez co gdy ją inkrementujemy zmienia się w NaN.
+	* 
+	*  To zadziała:
+	*  foo.count++; 
 	*  
-	*  Można także zrezygnować z machanizmu this i zrobić coś takiego:
+	*  To także zadziała, ale jest to znowu rezygnacja z mechanizmu ```this```: 
 	*  data.count++;
+	*  Jest to ucieczka do znanego leksykalnego zakresu.
+	*  Pomijanie mechanizmu ```this``` wcale nam nie pomaga po prostu ignorujemy problem z powodu braku zrozumienia go. 
+	*  
     */
 }
 
@@ -93,14 +101,76 @@ for (i=0; i<10; i++) {
 		foo( i );
 	}
 }
+
 // foo: 6
 // foo: 7
 // foo: 8
 // foo: 9
 
-console.log( foo.count ); // 0 -- WTF?
+console.log( foo.count ); // 0 
+
+/**
+*   Najlepszym sposobem jest po prostu nauczenie się mechanizmu ```this```
+*   Poniżej użyliśmy ```this``` jako referencji do obiektu count
+*   Poprzez użycie call() upewniliśmy się, że ```this``` wskazuje na obiekt funkcji foo()
+*   
+*/
+
+function foo(num) {
+	console.log( "foo: " + num );
+	this.count++;
+}
+
+foo.count = 0;
+
+var i;
+
+for (i=0; i<10; i++) {
+	if (i > 5) {
+		foo.call( foo, i );
+	}
+}
+// foo: 6
+// foo: 7
+// foo: 8
+// foo: 9
+
+console.log( foo.count ); // 4
 
 ```
 
+Kolejnym bardzo popularnym nieporozumieniem jest to, że ```this``` odwołuje sie zakresu funkcji. 
+Jest to podchwytliwe, dlatego, że jednocześnie jest to prawda, ale też i błędne założenie. 
+Zacznijmy od tego, że ```this``` nie odnosi się w żadnym wypadku do leksykalnego zakresu jak było pokazane w 
+powyższych przykładach. 
+Zakres jest to pewnego rodzaju obiekt z właściwościami, ale nie jest on dostępny dla programisty. Jest to po
+prostu część silnika.
+
+```javascript
+
+/**
+*   Mamy tutaj próbę stworzenia pomostu między leksykalnymi zakresami. Jest to niemożliwe. 
+*   Użycie ```this``` nie tworzy mostu pomiędzy foo() i bar().
+*   Nie można używać ```this``` aby zobaczyć coś w leksykalnym zakresie.
+*/
+
+function foo() {
+	var a = 2;
+	this.bar();
+}
+
+function bar() {
+	console.log( this.a );
+}
+foo(); //undefined
+
+```
+
+<<<<<<< HEAD
 
 
+=======
+Podsumowując ```this``` nie jest odwołaniem do funkcji, ani do zakresu leksykalnego.
+Wiązanie (ang. binding) ```this``` jest gdy funkcja jest wywoływana i to do 
+czego odwołuje się mechanizm ```this``` jest całkowicie zdeterminowane przez źródło wywołania.
+>>>>>>> 31cef19509d083420fb9881c1e1d475322dc738b
