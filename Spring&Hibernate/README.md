@@ -183,12 +183,76 @@ File: applicationContext.xml
 ```xml
 
 <bean id="myFortuneService"
-  class="spring.demo.coaches.HappyFortuneService">
+  class="spring.demo.coaches.HappyFortuneService"> // here is our dependency
 </bean>
 
 <bean id="myCoach"
   class="spring.demo.coaches.BaseballCoach">
-    <constructor-arg ref="myFortuneService" />
+    <constructor-arg ref="myFortuneService" /> // here we inject our dependency
 </bean>
 
 ```
+#### When Injection happens What Spring do? ( Constructor Injection )
+Spring perform some operation based on information in your config file. It will create and inject object behind the scenes.
+
+## Setter Injection. What it is?
+Spring injects dependencies by calling setter methods
+
+1. Create Setter in class for injection
+2. Configure the dependency injection in Spring config file
+
+...
+
+# Bean Scopes
+
+Scope - referes to the lifecycle of the bean
+e.g.
+1. How long does the bean live?
+2. How many instances are created?
+3. How is the beans shared?
+
+Default scope: Singleton
+
+What is Singleton?
+
+- Spring Container creates only one instance of the bean, by Default
+- It is cached in memory
+- There is one bean and everyone will share it. So all requests for the bean will return SHARED reference to the SAME bean
+
+Different scopes:
+- Singleton - creates single shared instance if the bean. Default scope.
+- prototype - creates new bean instance for each container request
+- request - scoped to an HTTP web reqest
+- session scoped to an HTTP web session
+- global-session - scoped to a global HTTP web session
+
+## Bean lifecycle
+Container started -> bean instantiated -> dependecies injected -> internall Spring processing -> Your Custom Init Method -> bean ready to use, container is shutdown
+
+You can call a method during inicialization or destruction of bean. It's called hooks.
+
+
+TIP: For "prototype" scoped beans, Spring does not call the destroy method.
+
+# Java Annotations
+- they are special markers added to Java classes and it gives you meta data about class. Java Annotations is simply meta-data about a class.
+
+> meta data - is a data about other data.
+
+Annotations tells compiler that we are e.g. overriding a method.
+
+## Why use Spring with Annotations?
+
+- XML can be very verbose for LARGE projects. Imaginine you have 100 beans. It's very verbose (verbose - rozległe).
+- You can: Configure your Spring beans with Annotations: They minimizes the XML configuration. Annotations are like meta-data
+
+Once you add annotations to your class...
+- Spring will scan your Java classes for special annotations, when Spring find class that has annotation it will automatically register bean in the Spring-Container.
+
+#### Development process using annotations: (Step-By-Step)
+1. Enable component scanning in Spring config file (.xml).
+2. Add the @Component Annotation to you Java classes
+3. Retrieve bean from Spring container.
+
+
+TIP: Default @Component ID is name of the class (first letter lower-cases) e.g. public class Text -> ID: text
