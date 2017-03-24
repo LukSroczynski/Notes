@@ -118,7 +118,7 @@ Application Context provide:
 - ability to resolve messages to support internationalization
 - inheritance from parent context
 
-Specialized implementations: 
+Specialized implementations:
 - ClassPathXmlApplicationContext
 - - AnnotationConfigApplicationContext
 - GenericWebApplicationContext
@@ -126,4 +126,69 @@ Specialized implementations:
 
 ```java
   ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+```
+
+# Dependency injection
+e.g. Car
+Car Factory - you have there different parts of the car, e.g. engine, doors, tires, seats..
+Then technicians made a car from those pieces for you and deliver you a completed Car.
+
+In another words you just simply outsource construction and injection of your object to external entity (Car Factory).
+
+So...
+Spring have an object factory. When you retrive Coach object then that object can have additional dependencies and those are helper objects. So insted build all coach objects and his dependencies Spring0-Factory do this for you. You just simply get object that is ready to use.
+
+#### There is many types of injection with Spring:
+
+Most common ones are:
+- Contructor injecion
+- Setter Injection
+
+#### Development process - construction injection
+1. Define the dependency interface and class.
+2. Create Contructor in your class for injections.
+3. Configure the dependency injection in Spring config file.
+
+```java
+
+public interface FortuneService {
+
+  public String getFortune();
+}
+
+public class HappyFortuneService implements FortuneService {
+
+  public String getFortune() {
+    return "This is your lucky day!";
+  }
+}
+
+public class BaseballCoach implements Coach {
+
+    private FortuneService fortuneService;
+
+    public BaseballCoach(FortuneService theFortuneService) {
+      fortuneService = theFortuneService;
+    }
+
+    @Override
+    public String getDailyWorkout() {
+        return "Make FBW on gym. Also add running for 30min";
+    }
+}
+
+```
+
+File: applicationContext.xml
+```xml
+
+<bean id="myFortuneService"
+  class="spring.demo.coaches.HappyFortuneService">
+</bean>
+
+<bean id="myCoach"
+  class="spring.demo.coaches.BaseballCoach">
+    <constructor-arg ref="myFortuneService" />
+</bean>
+
 ```
