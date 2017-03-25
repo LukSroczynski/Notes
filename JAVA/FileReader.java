@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -11,8 +13,9 @@ import java.util.Scanner;
  */
 public class FileReader {
 
-    FileInputStream inputStream = null;
-    Scanner sc = null;
+    private ArrayList<String> data = new ArrayList<>();
+    private FileInputStream inputStream = null;
+    private Scanner sc = null;
 
     /**
      * Put project path e.g. src/data/file.txt
@@ -26,7 +29,8 @@ public class FileReader {
             sc = new Scanner(inputStream, "UTF-8");
             while (sc.hasNextLine()) {
                 String line = sc.nextLine();
-                 System.out.println(line);
+                data.add(line);
+//                System.out.println(line);
             }
             if (sc.ioException() != null) {
                 throw sc.ioException();
@@ -59,5 +63,9 @@ public class FileReader {
         File systemPath = new File(projectPath);
         String fullPath = systemPath.getAbsolutePath();
         return fullPath;
+    }
+
+    public ArrayList<String> getCollectionOfLines() {
+        return data;
     }
 }
