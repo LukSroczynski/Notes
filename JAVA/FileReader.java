@@ -1,10 +1,25 @@
+package spring.annotations.file.reader;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Scanner;
+
+/**
+ * Created by Surreallistic on 25.03.2017.
+ */
 public class FileReader {
-    
+
     FileInputStream inputStream = null;
     Scanner sc = null;
 
+    /**
+     * Put project path e.g. src/data/file.txt
+     * @param projectFilePath
+     */
     public FileReader(String projectFilePath) {
-        
+
         try {
             getAbsoluteSystemPath(projectFilePath);
             inputStream = new FileInputStream(projectFilePath);
