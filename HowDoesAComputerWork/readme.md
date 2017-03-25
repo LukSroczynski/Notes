@@ -10,7 +10,7 @@ Gdy OS jest aktywny włączają się różne usługi jakie oferuje OS. Zaczynaj�
 Można myśleć o komputerze jako o pudełku z oprogramowaniem (ang. software), które mówi co ma robić sprzęt (ang. hardware). 
 Oprogramowaniem w tym przypadku jest OS, które zarządza limitowanymi zasobami komputera i wykonuje wszystkie procesy jakie mu przekazałeś.
 
-
+ciąg dalszy nastąpi...
 
 
 
@@ -29,3 +29,5 @@ https://www.youtube.com/watch?v=rVB_zCBrgXI&t=560s
 Druga część:
 
 https://www.youtube.com/watch?v=kA_L_MaEQsc
+
+That's gonna be: WPIS DO BLOGA 
