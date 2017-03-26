@@ -250,9 +250,69 @@ Once you add annotations to your class...
 - Spring will scan your Java classes for special annotations, when Spring find class that has annotation it will automatically register bean in the Spring-Container.
 
 #### Development process using annotations: (Step-By-Step)
-1. Enable component scanning in Spring config file (.xml).
+1. Enable component scanning in Spring configuration file (.xml).
 2. Add the @Component Annotation to you Java classes
 3. Retrieve bean from Spring container.
 
 
 TIP: Default @Component ID is name of the class (first letter lower-cases) e.g. public class Text -> ID: text
+
+#### Auto-Wiring - What it is?
+
+Spring for Dependency Injection uses Auto-Wiring.
+Spring can automatically wire-up your objects together.
+Spring will look for a class that matches given property.
+When Spring finds Match-By-Type -> class or interface
+It will automatically inject -> it's called: Auto-Wiring
+
+###### Auto-Wiring Example:
+1. Injecting FortuneService into a Coach implementation.
+2. Spring will scan @Components.
+3. Anyone implements FortuneService interface?
+4. If so, let's inject them. For example: HappyFortuneService.
+
+###### Auto-Wiring Types of Injection:
+- Constructor Injection
+- Setter Injection
+- Field Injection (even on private Fields)
+
+###### Development Process - Constructor Injection (Step-By-Step)
+1. Define Dependency interface and Class
+2. Create a Constructor in your class for injection
+3. Configure the Dependency injection with @Auto-Wired Annotation
+
+TIP: Singleton is cached is memory. That why there is only one copy of bean.
+
+TIP: For prototype scope there is no destroy method
+
+# Pure Java Spring Configuration - Spring Configuration with Java Code
+- there is no need for XML file
+
+#### Development Process:
+1. Create a Java class with annotation: @Configuration
+2. Add Component scanning support (optional): @ComponentScan()
+3. Read Spring Java-Configuration class
+4. Retrieve bean from Spring container
+
+# Spring MVC - is a framework to build web application in Java
+- based on model-view-controller
+- leverages ( wykorzystuje ) features of the Core-Spring Framework ( IoC and DI )
+
+WebBrowser ->
+Make request ->
+Spring-MVC-Front-Controller -> ( Is known as a DispatcherServlet - It's a part of Spring-Framework - delegates request further )
+Controller-Code ->
+View-Template ->
+Make response ->
+WebBrowswer
+
+### Components of Spring MVC application:
+- set of web pages to layout UI Components
+- Collection of Spring Beans (controllers, services...)
+- Spring-Configuration (XML, annotations, or Java-Code)
+
+Model - Contain Data, container
+View - JSP or JSTL (Most Popular ones) Page or View-Page to render Data, so.. Model-Data comes to View-Template and JSP can read model data and Display It.
+Controller - logic, handle request, read/write some form data, place data in model -> at the end send to View-Template
+
+Other View-Templates: Thymeleaf, Groovy, Velocity, Freemarker
