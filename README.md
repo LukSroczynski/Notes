@@ -12,4 +12,5 @@ https://commons.apache.org/proper/commons-logging/download_logging.cgi
 
 
 GIT TOO LONG PATH WINDOWS: git config core.longpaths true
- 
+After: git reset --hard HEAD~1
+
