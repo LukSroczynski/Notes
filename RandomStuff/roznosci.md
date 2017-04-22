@@ -17,7 +17,7 @@ Funkcje:
 
 ### Kolejka - First In, First out
 
-> ten algorytm można porównać do Stosu, jako jego odwrotność. Pobierany jest pierwszy element, który został wstawiony jako pierwszy.  
+> Podobny do stosu, wstawiony element do kolejki jest jako pierwszy z niej pobierany.  
 
 Funkcje: 
 * empty() zwraca true jeżeli kolejka jest pusta
@@ -27,7 +27,31 @@ Funkcje:
 
 ### Lista
 
-> 
+> Jest to struktura danych przechowująca nieznaną z góry liczbę parametrów tego samego typu. Składa się ona z węzłów. Zawierają one dane z listy oraz wskaźnik do kolejnego elementu. W przypadku listy dwukierunkowej także do poprzedniego. 
+
+Lista jednokierunkowa - Zawiera blok informacyjny INFO (Głowa: wskaźnik do pierwszego elementu oraz ostatniego). Ponadto każdy element zawiera wskaźnik do następnego elementu. 
+
+Lista dwukierunkowa - to samo co jednokierunkowa. Zawiera dodatkowo wskaźnik do poprzedniego elementu. 
+
+Lista posortowane / nieposortowane - dane z listy mogą być posortowane lub też być przypadkowe. 
+
+Listy z wartownikiem / bez wartownika -  na początku listy może
+znajdować się dodatkowy element zwany wartownikiem (wówczas
+pierwszy element listy to następnik wartownika; ostatni element listy
+to poprzednik wartownika; lista pusta składa się tylko z wartownika)
+
+Funkcje: 
+* push_front() dodaje element na początku listy
+* push_back() dodaje element na końcu listy
+* insert() dodaje element we wskazanym miejscu listy
+* pop_front() usuwa element z początku listy
+* pop_back() usuwa element z końca listy
+* size() zwraca liczbę elementów na liście
+* max_size() zwraca maks. liczbę elementów jakie może zmieścić lista
+* empty() sprawdza czy lista jest pusta
+* remove() usuwa z listy wszystkie elementy mające daną wartość
+* sort() układa elementy na liście rosnąco
+* reverse() odwraca kolejność elementów na liście
 
 ### Graf 
 ### Drzewo
