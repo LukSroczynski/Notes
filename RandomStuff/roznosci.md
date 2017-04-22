@@ -2,7 +2,7 @@
 
 Stuktury danych to pojemniki na dane, które je gromadzą i układają w odpowiedni sposób. 
 
-Podstawowe struktury danych: 
+## Podstawowe struktury danych: 
 
 ### Stos - Last In, First Out
 > Można sobie wyobrazić jako stos książek, które układamy kolejno na sobie, w danym momencie dostępna jest tylko książka na górze stosu, którą możemy zabrać. .
