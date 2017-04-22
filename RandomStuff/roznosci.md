@@ -53,8 +53,14 @@ Funkcje:
 * sort() układa elementy na liście rosnąco
 * reverse() odwraca kolejność elementów na liście
 
-### Graf 
 ### Drzewo
+
+> Jest to hierarchiczna struktura danych. Znaczy to tyle, że dane są uporządkowane według jakiegoś kryterium. Elementy są nazwane węzłami lub wierzchołkami. A więc węzeł posiada co najwyżej dwa następniki, binarny = dwójkowy, dwa elementy. Następniki te nazywamy potomkami. (child node) danego węzła czyli ojca (parent node). Czyli mamy ~Parent Node i on ma ~Child Node. Węzeł, który nie posiada rodzica jest nazwany ~Root Node. Tak, więc podsumowując hierarchia węzłów wygląda następująco: 
+Root Node -> Parent Node -> Child Node 
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Full_binary.pdf/page1-220px-Full_binary.pdf.jpg
+
+### Graf 
 ### Kopiec - Heap
 
 2. Podstawowe konstrukcje języków algorytmicznych. Rekurencja i typy programów rekurencyjnych. Analiza sprawności algorytmów.
