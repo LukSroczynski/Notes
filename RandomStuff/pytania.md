@@ -1,5 +1,15 @@
 1. Struktury danych, paradygmaty projektowania algorytmów, modele rozwiązywania problemów.
 
+Stuktury danych to pojemniki na dane, które je gromadzą i układają w odpowiedni sposób. 
+
+Podstawowe struktury danych: 
+- Stos
+- Lista
+- Kolejka
+- Graf 
+- Drzewo
+- Kopiec
+
 2. Podstawowe konstrukcje języków algorytmicznych. Rekurencja i typy programów rekurencyjnych. Analiza sprawności algorytmów.
 
 3. Programowanie strukturalne i obiektowe. Algorytmy sortowania i wyszukiwania danych.
