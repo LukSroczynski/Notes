@@ -8,11 +8,11 @@ Podstawowe struktury danych:
 > Można sobie wyobrazić jako stos książek, które układamy kolejno na sobie, w danym momencie dostępna jest tylko książka na górze stosu, którą możemy zabrać. 
 
 Funkcje: 
-empty() zwraca true jeżeli stos jest pusty
-pop() usuwa element znajdujący się na szczycie stosu
-push() dodaje element na szczycie stosu
-size() zwraca liczbę elementów stosu
-top() zwraca referencję do elementu na szczycie stosu
+* empty() zwraca true jeżeli stos jest pusty
+* pop() usuwa element znajdujący się na szczycie stosu
+* push() dodaje element na szczycie stosu
+* size() zwraca liczbę elementów stosu
+* top() zwraca referencję do elementu na szczycie stosu
 
 ```java
 
