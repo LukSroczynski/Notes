@@ -57,14 +57,21 @@ Funkcje:
 
 > Jest to hierarchiczna struktura danych. Znaczy to tyle, że dane są uporządkowane według jakiegoś kryterium. Elementy są nazwane węzłami lub wierzchołkami. A więc węzeł posiada co najwyżej dwa następniki, binarny = dwójkowy, dwa elementy. Następniki te nazywamy potomkami. (child node) danego węzła czyli ojca (parent node). Czyli mamy ~Parent Node i on ma ~Child Node. Węzeł, który nie posiada rodzica jest nazwany ~Root Node. Tak, więc podsumowując hierarchia węzłów wygląda następująco: 
 Root Node -> Parent Node -> Child Node 
-
+REMINDER: Posiada Co Najwyżej dwa następniki
 
 ![myimage-alt-tag](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Full_binary.pdf/page1-220px-Full_binary.pdf.jpg)
+
+Drzewo zapełniamy w następujący sposób:
+1. Porównujemy liczbę z węzłem głównym rodzicem Parent Node lub Root Node w przypadku zaczęcia porównywania. 
+2. Jeśli liczba jest mniejsza od wartości Parent Node wrzucamy liczbę na LEWĄ stronę i idziemy tak długo, aż napotkamy puste miejsce
+3. W przeciwnym wypadku wrzucamy liczbę na PRAWĄ stronę
+
+### Kopiec - Heap
+
 
 
 ### Graf 
 
-### Kopiec - Heap
 
 2. Podstawowe konstrukcje języków algorytmicznych. Rekurencja i typy programów rekurencyjnych. Analiza sprawności algorytmów.
 
