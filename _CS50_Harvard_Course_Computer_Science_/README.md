@@ -1,1 +1,1 @@
-#Harvard - Computer Science 50 : CS50
+# Harvard - Computer Science 50 : CS50
