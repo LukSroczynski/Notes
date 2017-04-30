@@ -25,6 +25,7 @@ headers file includes functions that are definied somewhere in the program
 
 You can do that or you can write print_name in different file
 ```C
+// preprocessing - those thinks happens first 
 #include <stdio.h>
 #include <cs50.h>
 
@@ -43,3 +44,9 @@ void print_name(string s)
     printf("Hello, %s\n", s);
 }
 ```
+
+What happens when you run a program: 
+1. Preprocessing
+2. Compiling
+3. 
+4. 
