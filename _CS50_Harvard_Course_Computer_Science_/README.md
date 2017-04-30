@@ -28,6 +28,7 @@ You can do that or you can write print_name in different file
 #include <stdio.h>
 #include <cs50.h>
 
+// that's called prototype
 void print_name(string s);
 
 int main(void) 
