@@ -46,7 +46,7 @@ void print_name(string s)
 ```
 
 What happens when you run a program: 
-1. Preprocessing
-2. Compiling
-3. 
-4. 
+1. Preprocessing - find and replace
+2. Compiling - takes source code to assembly
+3. Assembling - takes to 0 1 that CPU understands
+4. Linking - takes all 0 1, from cs50, stdio and others... and combines it into our program
