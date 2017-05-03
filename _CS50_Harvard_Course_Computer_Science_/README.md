@@ -50,3 +50,5 @@ What happens when you run a program:
 2. Compiling - takes source code to assembly
 3. Assembling - takes to 0 1 that CPU understands
 4. Linking - takes all 0 1, from cs50, stdio and others... and combines it into our program
+
+TASKS: 
