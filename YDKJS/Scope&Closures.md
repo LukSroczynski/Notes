@@ -548,7 +548,9 @@ console.log( err ); // ReferenceError: `err` not found
 
 ## Hoisting - continuation
 
-Hoisting - jest dla Zasięgu.
+W skrócie jest to użycie zmiennej przed jej zadeklarowaniem
+
+Hoisting - jest dla Zasięgu. 
 ```javascript
 
 var foo;
