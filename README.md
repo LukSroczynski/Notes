@@ -15,3 +15,5 @@ GIT TOO LONG PATH WINDOWS: git config core.longpaths true
 
 After: git reset --hard HEAD~1
 
+TDD:
+https://www.youtube.com/watch?v=45T32_ImO2c&list=PLBBog2r6uMCSa9_mNISSpTcbTcKlMAe6t
