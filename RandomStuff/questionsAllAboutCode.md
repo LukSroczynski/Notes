@@ -1,4 +1,4 @@
-## What are the treats related to usage of wildcards?
+## Why wildcards shouldn't be used? Why explicit way is better? Why implicit way is bad?
 
 Basically they shouldn't be used because they blend local namespaces. So better practice is to use imports in explicit way.
 Let's say I would use something like that as a wildcard:
