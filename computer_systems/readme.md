@@ -27,9 +27,26 @@ Most devices like smartphones run have processors that implements ARM architectu
 
 Different processors Can implement same architecture instruction set like x86. 
 
-> Soo What the difference between old and new processors? 
 
-Basically they
+
+1. Soo What the difference between old and new processors? 
+
+Basically they do same instruction set but newer ones do it faster. 
+
+2. What is a computer program? 
+
+It's a huge list of instructions that processor can understand.
+
+3. What is GHz means in processor? 
+
+Hz - is how we measure speed of the processor. Also it is a measure of freqency. Frequency is simply how often something happens in 
+particular ammount of time.
+1Hz - is one cycle per second
+1GHz - is one bilon cycles per second 
+G - giga - 10^9
+
+
+
 
 
 
