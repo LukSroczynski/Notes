@@ -27,13 +27,11 @@ Most devices like smartphones run have processors that implements ARM architectu
 
 Different processors Can implement same architecture instruction set like x86. 
 
-
-
 <h3> 1. Soo What the difference between old and new processors? </h3>
 
 > Basically they do same instruction set but newer ones do it faster. 
 
-<h3> 2. What is a computer program? </h3>
+<h3> 2. What is a Computer Program? </h3>
 
 > It's a huge list of instructions that processor can understand.
 
@@ -48,7 +46,19 @@ particular amount of time.
 
 > G - giga - 10^9
 
+<h3> 3. What multicore multithread means? </h3>
 
+1 Core - is like person It can do one thing at a time.
+1 Core Can have 1 thread then It can do this one thing at a time.
+BUT 
+1 Core Can Also Have More threads like 4 threads and that means It can Do 4 things at a time. 
+
+Soo
+1Core1Thread - one thing at same the time
+1Core4Thread - four things at same the time
+
+Let's say we have:
+4Cores4Threads - so there is four cores that can do 4 things at the same time
 
 
 
