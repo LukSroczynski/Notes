@@ -71,6 +71,17 @@ Hardware threads is when one processor can handle more than one thread at the sa
 
 Simultaneous multi-threading - is the same as Hyper-threading that Intel made and implemets that is his processors. 
 
+# Memory Hierarchy
 
+> L0: At the top the fastest: registers (they are the small memeories but very fast) 
 
+> L1:
+
+> L2:
+
+> L3:
+
+> L4: RAM 
+
+> L5: At the bottom the slowest: hard drives, flash drives, big types of memory, TB of data
 
