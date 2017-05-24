@@ -16,6 +16,6 @@ put it into RAM. Process that takes stuff in & out memory is called "Paging".
 So for example when you have a task killer or similar software on your smartfon then you just taking stuff from the 
 memory-box RAM to make room for other stuff that you will run.
 
-# CPU - Processors
+# CPU - Processor 
 
 Instruction Set Architecture - list of instruction that PC understands. List contains all the things that PC can make like adding, multiplying etc. 
