@@ -29,15 +29,15 @@ Different processors Can implement same architecture instruction set like x86.
 
 
 
-1. <h3> Soo What the difference between old and new processors? </h3>
+<h3> 1. Soo What the difference between old and new processors? </h3>
 
 > Basically they do same instruction set but newer ones do it faster. 
 
-2. What is a computer program? 
+<h3> 2. What is a computer program? </h3>
 
 > It's a huge list of instructions that processor can understand.
 
-3. What is GHz means in processor? 
+<h3> 3. What is GHz means in processor? </h3>
 
 > Hz - is how we measure speed of the processor. Also it is a measure of freqency. Frequency is simply how often something happens in 
 particular ammount of time.
