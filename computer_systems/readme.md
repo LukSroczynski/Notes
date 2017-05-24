@@ -96,3 +96,36 @@ RAM, HardDrives
 On-Chip:
 L1: Cache
 
+# GPU - Graphics Card
+
+GPU - implments like the processor instruction set architecture but only specific ones that are focused on graphics. 
+
+Video Card - it is not the same as GPU. There is two main ways that PC handles graphics: 
+- integrated graphics
+- dedicated graphics
+
+Video Card - has its own RAM, has GPU, heat sinks, fans, also like CPU all that memory levels and cache layers to optimize performance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
