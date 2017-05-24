@@ -29,7 +29,7 @@ Different processors Can implement same architecture instruction set like x86.
 
 
 
-1. Soo What the difference between old and new processors? 
+1. <h3> Soo What the difference between old and new processors? </h3>
 
 > Basically they do same instruction set but newer ones do it faster. 
 
