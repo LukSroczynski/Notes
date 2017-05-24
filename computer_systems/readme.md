@@ -73,15 +73,26 @@ Simultaneous multi-threading - is the same as Hyper-threading that Intel made an
 
 # Memory Hierarchy
 
-> L0: At the top the fastest: registers (they are the small memeories but very fast) 
+On-chip
+> L0: At the top the fastest: registers (they are the smallest memory and the fastest). Number of the registers is definied by architecture instruction set. 
 
-> L1:
+On-chip
+> L1: Cache - smaller than L2 Cache but again faster to access. It on Chip, included in processor. RAM is off-chip which means its
+seperated.
 
-> L2:
+Off-chip
+> L2: Cache - smaller than RAM and Faster. For example it have 256MB. Frequently access data is store here. So the processor can 
+access it very fast and don't have to look at RAM which is a bit slower. Almost 10 times slower than L1 Cache. 
 
-> L3:
+Off-chip
+> L4, L3: RAM - any program that you run must exsist on RAM for processor to execute it. Almost 100 times slower than L1. 
 
-> L4: RAM 
-
+Off-chip
 > L5: At the bottom the slowest: hard drives, flash drives, big types of memory, TB of data
+
+Off-Chip: 
+RAM, HardDrives
+
+On-Chip:
+L1: Cache
 
