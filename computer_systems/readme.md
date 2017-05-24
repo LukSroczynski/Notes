@@ -6,7 +6,8 @@ CPU (Processor) - run all your programs on PC. It's doing all the processing.
 
 In order for CPU to run a program, program has to exsist on RAM.
 
-TIP: For example when you boot you PC, smartfon then operating system is taken from flash memory and puted inside of RAM.
+TIP: For example when you boot you PC, smartfon then operating system is taken from flash memory and puted inside of RAM. After that is 
+executed by CPU.
 
 When RAM is exceeded, when there is no room for another program that you want to run. Then we have to take something out of RAM
 and put something that you want to use. That's why it's better to have more RAM because you don't have to go back to your flash drive and 
