@@ -48,19 +48,24 @@ particular amount of time.
 
 <h3> 3. What multicore multithread means? </h3>
 
-1 Core - is like person It can do one thing at a time.
+> 1 Core - is like person It can do one thing at a time.
 1 Core Can have 1 thread then It can do this one thing at a time.
 BUT 
 1 Core Can Also Have More threads like 4 threads and that means It can Do 4 things at a time. 
 
-Soo
+> Soo
 1Core1Thread - one thing at same the time
 1Core4Thread - four things at same the time
 
-Let's say we have:
+> Let's say we have:
 4Cores4Threads - so there is four cores that can do 4 things at the same time
 
+BUT 
+> That doesn't means that speed is 4x times faster.
+Each Core Can access a resource like particular part of memory RAM but then others can't
 
 
+
+ 
 
 
