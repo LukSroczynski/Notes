@@ -40,7 +40,7 @@ Different processors Can implement same architecture instruction set like x86.
 <h3> 3. What is GHz means in processor? </h3>
 
 > Hz - is how we measure speed of the processor. Also it is a measure of freqency. Frequency is simply how often something happens in 
-particular ammount of time.
+particular amount of time.
 
 > 1Hz - is one cycle per second
 
