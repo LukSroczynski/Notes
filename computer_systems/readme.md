@@ -18,4 +18,19 @@ memory-box RAM to make room for other stuff that you will run.
 
 # CPU - Processor 
 
-Instruction Set Architecture - list of instruction that PC understands. List contains all the things that PC can make like adding, multiplying etc. 
+Instruction Set Architecture - list of instruction that PC understands. List contains all the things that PC can make like adding, 
+multiplying etc. Processor makes simply things.
+
+Most PC for the past decade run on x86 architecture instruction set.
+
+Most devices like smartphones run have processors that implements ARM architecture instruction set. 
+
+Different processors Can implement same architecture instruction set like x86. 
+
+> Soo What the difference between old and new processors? 
+
+Basically they
+
+
+
+
