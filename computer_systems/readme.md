@@ -52,7 +52,7 @@ particular amount of time.
 
 BUT 
 
-1 Core Can Also Have More threads like 4 threads and that means It can Do 4 things at a time. 
+> 1 Core Can Also Have More threads like 4 threads and that means It can Do 4 things at a time. 
 
 > Soo
 1Core1Thread - one thing at same the time
@@ -65,8 +65,12 @@ BUT
 > That doesn't means that speed is 4x times faster.
 Each Core Can access a resource like particular part of memory RAM but then others can't
 
+Software threads is how programmmer makes a program that uses architecture instruction set.
+
+Hardware threads is when one processor can handle more than one thread at the same time. 
+
+Simultaneous multi-threading - is the same as Hyper-threading that Intel made and implemets that is his processors. 
 
 
- 
 
 
