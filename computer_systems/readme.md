@@ -124,11 +124,13 @@ any library running.
 Summarizing: processes, applications utilize libraries. 
 
 <h3> Shared Library </h3> 
+
 > *.so, *.dll, *.DYLIB
 
 
 <h3> Static Library </h3>
-*.A, *.LIB
+
+> *.A, *.LIB
 
 
 
