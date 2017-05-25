@@ -159,6 +159,23 @@ Every variable has value & address. Every single variable has its own address.
 
 # Virtual Memory
 
+programs == processes
+
+So the operating system manages application memory. Manages all applications that are running on the system. All of this behind scenes. 
+
+Operating system provides a blueprint of memeory for every single process. It's same blueprint for each program. 
+Virtual memory is a map to diffrent physical addresses. Its purpose is that make sure that programs don't bump into each other. 
+So if both application store data at address e.g. 500. Then this address actually address to different part of memeory. 
+
+Soo for example 
+> Facebook have virtual address 500 that points to real address 3000
+> Instagram have virtual address 500 that points to real address 4500
+
+Operating system makes sure that those addresses never collide in the physical memory. 
+
+TIP: virtual memory takes coordination of hardware and software together. Both exsist together to make virtual memory work. 
+
+<h4> What goes inside this blueprint that every process gets? </h4> 
 
 
 
