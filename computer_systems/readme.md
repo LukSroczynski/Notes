@@ -1,3 +1,7 @@
+# Useful terms
+
+Shell - user interface for access operating system services. It can be a command-line interface or graphical user interface. GUI or CLI
+
 # RAM memory
 
 Stores currently running programs. 
@@ -106,22 +110,25 @@ Video Card - it is not the same as GPU. There is two main ways that PC handles g
 
 Video Card - has its own RAM, has GPU, heat sinks, fans, also like CPU all that memory levels and cache layers to optimize performance.
 
+# How code works? 
+Source code -> machine code -> executable file
+
+# Static and Shared libraries
+
+When a lot of applications use common functionality like print() 
+then that functionality is packaged up into library. So library is just 
+a file, nothing more or less. Major difference is you cannot execute library. 
+So when you open task manager then you can see processses (applications) that uses libraries but you are not gonna see there
+any library running. 
+
+Summarizing: processes, applications utilize libraries. 
+
+<h3> Shared Library </h3> 
+> *.so, *.dll, *.DYLIB
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<h3> Static Library </h3>
+*.A, *.LIB
 
 
 
