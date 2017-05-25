@@ -1,6 +1,6 @@
 # Useful terms
 
-Shell - user interface for access operating system services. It can be a command-line interface or graphical user interface. GUI or CLI
+Shell - user interface for access operating system services. It can be a command-line interface or graphical user interface. (CLI or GUI)
 
 # RAM memory - Random Access Memory
 
