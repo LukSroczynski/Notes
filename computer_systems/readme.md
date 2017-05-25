@@ -123,16 +123,33 @@ any library running.
 
 Summarizing: processes, applications utilize libraries. 
 
-<h3> Shared Library </h3> 
+<h3> Shared Libraries </h3> 
 
-> *.so, *.dll, *.DYLIB
+> So for example our application references a shared library and uses some functionality, but on itself 
+doesn't have that library it just uses, reference that library functionality. References a library when it runs.
+So you have to have a application and the shared libarary at the same time.
 
+> Linux: *.so
+> Windows: *.dll
+> Mac: *.DYLIB
 
-<h3> Static Library </h3>
+<h3> Static Libraries </h3>
 
-> *.A, *.LIB
+> Our program is going to utilize a static library at compile time. Remember compile time is before run-time. Something must be compiled 
+before you can even run it. So at that compilation time we take/copy all code that we need and move to our application. So thats
+difference between Shared and Static library, that on static we copy libarary function to our application on shared we just use it. 
+Static you don't need to have a libarary at run-time becasuse you have a copy of library.
 
+> Unix: *.A
+> Windows: *.LIB
 
+<h3> What's the difference between two of them? </h3> 
+Major difference is that static library copy all the things that you want to use and that can take a lot of time and space. 
+Where shared library just uses some libararies that are out there. So Shared keeps application really small because you don't need
+that copy/paste code. So major consideration when you develop application should be Size of your app and if that matters.
+
+Static could be a little convenient when you gave program to client and he have full-pack of everything inside so he don't have
+to worry about anything. 
 
 
 
