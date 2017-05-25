@@ -2,7 +2,7 @@
 
 Shell - user interface for access operating system services. It can be a command-line interface or graphical user interface. GUI or CLI
 
-# RAM memory
+# RAM memory - Random Access Memory
 
 Stores currently running programs. 
 
@@ -151,6 +151,13 @@ that copy/paste code. So major consideration when you develop application should
 Static could be a little convenient when you gave program to client and he have full-pack of everything inside so he don't have
 to worry about anything. 
 
+# Pointers
+
+Basic Overview:
+Pointer itself is a variable. It stores an address of e.g. some other variable. Pointer is small size. Variable could be big.
+Every variable has value & address. Every single variable has its own address. 
+
+# Virtual Memory
 
 
 
