@@ -222,22 +222,25 @@ pipelining is possible.
 
 Count to 3: 
 
-00 - 0
+> 00 - 0
 
-01 - 1
+> 01 - 1
 
-10 - 2
+> 10 - 2
 
-11 - 3
+> 11 - 3
 
 Add binary: 
 
-00 + 00 = 0
-00 + 01 = 01
-01 + 00 = 01
-01 + 01 = 10
+> 00 + 00 = 0
 
-3. Add numbers
+> 00 + 01 = 01
+
+> 01 + 00 = 01
+
+> 01 + 01 = 10
+
+3. Add numbers - works just like above example
 ![image](http://d2r5da613aq50s.cloudfront.net/wp-content/uploads/310623.image1.jpg)
 
 
