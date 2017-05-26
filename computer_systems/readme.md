@@ -175,7 +175,29 @@ Operating system makes sure that those addresses never collide in the physical m
 
 TIP: virtual memory takes coordination of hardware and software together. Both exsist together to make virtual memory work. 
 
-<h4> What goes inside this blueprint that every process gets? </h4> 
+# Instruction Level Parallelism
 
+Instruction Level Parallelism - is a technique on the compilter and on the hardware. Kinda like virutal memeory where software and hardware coexsist. So if software is crappy then it's gonna take a long time to perform a task even when you have a good processor but you don't utilize all available resources.
 
+So first of all for parallelism we need to have a good hardware to make it even possible.
+Second thing we need a good software to utilize all available resources.
+
+TL;TR
+It's a collaborative hardware & software technique to increse efficiency of processor. So when there is limited CPU capabilities then 
+it's only so much a CPU can do. But on the other hand when you have some big, strong CPU, and a crappy software then it's similar to first one there is only so much you can do. Your crappy software is not gonna use all the resources available. 
+
+# Instruction pipelining
+
+Concept that improves parallelism. 
+
+Example: 
+
+Let's say we have a laundry: 
+1. Wash (washer)
+2. Dry (dryer)
+
+         WASH     DRY
+0-30    BATCH1   
+30-60   BATCH2   BATCH1
+60-90            BATCH2
 
