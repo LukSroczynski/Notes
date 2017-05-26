@@ -197,7 +197,7 @@ Let's say we have a laundry:
 2. Dry (dryer)
 
          WASH     DRY
-0-30    BATCH1   
-30-60   BATCH2   BATCH1
-60-90            BATCH2
+ 0-30    BATCH1   
+ 30-60   BATCH2   BATCH1
+ 60-90            BATCH2
 
