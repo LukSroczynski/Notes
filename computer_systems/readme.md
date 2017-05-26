@@ -196,8 +196,39 @@ Let's say we have a laundry:
 1. Wash (washer)
 2. Dry (dryer)
 
-         WASH     DRY
- 0-30    BATCH1   
- 30-60   BATCH2   BATCH1
- 60-90            BATCH2
+Each step takes 30min 
+1. Make Wash1
+2. Place Wash1 into Dryer1 and at the same time make Wash2
+3. Place Wash2 into Dryer2
+Result: 90min
+
+Another example
+We have a wash-dryer in one piece
+1. Make Wash-dry 60min (wash 30min and dry 30min)
+Result 120min and we can't jump over it
+
+So it's better to do pipelining and broke problem into smaller pieces. 
+
+So in the hardware some calculation is broken into smaller pieces. Like adding is broken into small pieces and because of that
+pipelining is possible. 
+
+# Computer Logic
+
+1. Logic gates
+![image](http://i.imgur.com/M59IOZQ.jpg)
+
+2. Binary
+
+3. Add Numbers
+
+
+
+
+
+
+
+
+
+
+
 
