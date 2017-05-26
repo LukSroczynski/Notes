@@ -215,12 +215,30 @@ pipelining is possible.
 # Computer Logic
 
 1. Logic gates
+
 ![image](http://i.imgur.com/M59IOZQ.jpg)
 
 2. Binary
 
-3. Add Numbers
+Count to 3: 
 
+00 - 0
+
+01 - 1
+
+10 - 2
+
+11 - 3
+
+Add binary: 
+
+00 + 00 = 0
+00 + 01 = 01
+01 + 00 = 01
+01 + 01 = 10
+
+3. Add numbers
+![image](http://d2r5da613aq50s.cloudfront.net/wp-content/uploads/310623.image1.jpg)
 
 
 
