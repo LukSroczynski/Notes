@@ -23,11 +23,11 @@ Heap is devided into:
 
   1. Young generation - 
 
-    1.1 Eden space
+    Eden space
 
-    1.2 Survivor space from
+    Survivor space from
 
-    1.3 Survivor to
+    Survivor to
 
   2. Old generation - 
 
