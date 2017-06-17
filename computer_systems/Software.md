@@ -18,3 +18,15 @@ Example: Single-Core CPU
 
 Parallelism - it's executing two physical task at the same exact time. 
 Example: Multi-Core CPU
+
+# What we should understand about programming languages? 
+
+From to Bottom to the Top
+
+Machine instructions - starts from the lowest level its just: 10100100101010010100001011100101. Which do for example adding. 
+
+Assembly languagage - It's just a wrapper of machine code. One level above machine code. 
+
+System languages (C/C++) - anything that we use to program operating system itself. We have more control over low level thing like memory. 
+
+Application / High level languages (Java, Python, Ruby, PHP, C#) - 
