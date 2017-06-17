@@ -81,3 +81,18 @@ HAS A
 e.g. Kitchen HAS A sink. 
 ```
 
+Encapsulation and public interfaces
+
+```
+Encapsulation - its idea of hiding details about classes.
+
+public interface - is how you expose your class to the outside world. 
+```
+
+
+
+
+
+
+
+
