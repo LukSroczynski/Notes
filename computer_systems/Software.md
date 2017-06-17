@@ -39,4 +39,23 @@ From to Bottom to the Top
 
 Language as itself can't we defined as interpreted or compiled. It just a implmentation which he have defines if it's interpreted or compiled. Just like processors implements architecure set it's similar here. 
 
-Python for example have normally a interpreter, but there is also compilers for Python so you could just compile your code.
+Python for example have a normally a interpreter, but there is also compilers for Python so you could just compile your code.
+
+# Types of Software Developers:
+
+<b>  </b>
+<b>  </b>
+<b>  </b>
+<b>  </b>
+<b>  </b>
+<b>  </b>
+<b>  </b>
+<b>  </b>
+<b>  </b>
+<b>  </b>
+<b>  </b>
+<b>  </b>
+
+
+
+
