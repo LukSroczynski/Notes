@@ -44,17 +44,20 @@ Python for example have a normally a interpreter, but there is also compilers fo
 # Types of Software Developers:
 
 - <b> Front-end </b> - those guys specialzed in code that runs inside your web browser. They works really close with designer and make they make pages responsive.
-- <b> Mobile </b>
-- <b>  </b>
-- <b>  </b>
-- <b>  </b>
-- <b>  </b>
-- <b>  </b>
-- <b>  </b>
-- <b>  </b>
-- <b>  </b>
-- <b>  </b>
-- <b>  </b>
+- <b> Mobile </b> - make games, Android, iOS, work closely with designers, they care for each pixel on the screen :) 
+- <b> Gaming </b> - write code for games, they play with 3D graphics and other crazy stuff
+- <b> Back-end </b> - system developers, those guys write what is behind the scenes. It stuff that powers website, api, sdk, manipulate DB.
+- <b> Application </b> - any kind of software that is used by consumer
+- <b> Data Science </b> - anyone who analize data, come up with any patterns, makes model organize data
+- <b> QA / TEST </b> - they develop code that tests other code. Really important to test code. 
+- <b> Algorithms </b> - academic types. Read a lot of science stuff. 
+- <b> Embeded </b> - it's very low level of programming. Those guys can write up code that runs even before OS loads. Guys that makes you camera works, keyboard, mouse etc. 
+- <b> OS </b> - Develop operating software, all files in system, services etc. very niche
+- <b> Dev-ops </b> - developers operations, network or system administrator, they handle needs of company, what types of PC you need, how back DB everyday, how to fix errors, bugs etc. manage engineer workflow, they just manage in most cases BIG systems. 
+- <b> Full-stack </b> - it can mean a lot of things. It's not a skillset. It's just a a idea you can do anything you know DB, web, back-end, front-end, basically you can make anything and you know anything.
+- <b> Compiler - language </b> - creates languages, compilers multiple ways of implementations different languages
+
+
 
 
 
