@@ -61,4 +61,3 @@ Python for example have a normally a interpreter, but there is also compilers fo
 
 
 
-
