@@ -57,7 +57,27 @@ Python for example have a normally a interpreter, but there is also compilers fo
 - <b> Full-stack </b> - it can mean a lot of things. It's not a skillset. It's just a a idea you can do anything you know DB, web, back-end, front-end, basically you can make anything and you know anything.
 - <b> Compiler - language </b> - creates languages, compilers multiple ways of implementations different languages
 
+# Object Oriented Programming
 
+Inheritance - when sub-class implements super-class. 
+```
+IS A
 
+e.g. Cook IS A Person.
+```
 
+Role
+```
+BEHAVES LIKE A 
+
+e.g. Chef BEHAVES LIKE A dishwasher and IS A Person
+e.g. Cat BEHAVES LIKE A dishwasher but isn't a Person
+```
+
+Composition - you take different classes and combine then together. 
+```
+HAS A 
+
+e.g. Kitchen HAS A sink. 
+```
 
