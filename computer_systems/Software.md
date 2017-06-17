@@ -36,3 +36,7 @@ From to Bottom to the Top
 <b> Compilation </b> - there is that step where your source code is translated into machine code. Major difference is that here is explicit step that translates you code. 
 
 <b> Interpreted </b> - there is no explicit compilation or translation step. Interpreter is some kinda of program that interpreters you code line by line and executes right thing. Only difference is that your program does not go throught compilation step.
+
+Language as itself can't we defined as interpreted or compiled. It just a implmentation which he have defines if it's interpreted or compiled. Just like processors implements architecure set it's similar here. 
+
+Python for example have normally a interpreter, but there is also compilers for Python so you could just compile your code.
