@@ -27,6 +27,8 @@ From to Bottom to the Top
 
 <b> Assembly languagage </b>  - It's just a wrapper of machine code. One level above machine code. 
 
-<b> System languages (C/C++) </b>  - anything that we use to program operating system itself. We have more control over low level thing like memory. 
+<b> System languages (C/C++) </b>  - anything that we use to program operating system itself. How systems operates. We have more control over low level thing like memory. 
 
-<b> Application / High level languages (Java, Python, Ruby, PHP, C#) </b>  - 
+<b> Application / High level languages (Java, Python, Ruby, PHP, C#) </b>  - you use then to create consumer applications. 
+
+
