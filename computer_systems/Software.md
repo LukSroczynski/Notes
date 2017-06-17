@@ -31,4 +31,8 @@ From to Bottom to the Top
 
 <b> Application / High level languages (Java, Python, Ruby, PHP, C#) </b>  - you use then to create consumer applications. 
 
+# Compiled vs Interpreted
 
+<b> Compilation </b> - there is that step where your source code is translated into machine code. Major difference is that here is explicit step that translates you code. 
+
+<b> Interpreted </b> - there is no explicit compilation or translation step. Interpreter is some kinda of program that interpreters you code line by line and executes right thing. Only difference is that your program does not go throught compilation step.
