@@ -23,10 +23,10 @@ Example: Multi-Core CPU
 
 From to Bottom to the Top
 
-Machine instructions - starts from the lowest level its just: 10100100101010010100001011100101. Which do for example adding. 
+<b> Machine instructions </b>  - starts from the lowest level its just: 10100100101010010100001011100101. Which do for example adding. 
 
-Assembly languagage - It's just a wrapper of machine code. One level above machine code. 
+<b> Assembly languagage </b>  - It's just a wrapper of machine code. One level above machine code. 
 
-System languages (C/C++) - anything that we use to program operating system itself. We have more control over low level thing like memory. 
+<b> System languages (C/C++) </b>  - anything that we use to program operating system itself. We have more control over low level thing like memory. 
 
-Application / High level languages (Java, Python, Ruby, PHP, C#) - 
+<b> Application / High level languages (Java, Python, Ruby, PHP, C#) </b>  - 
