@@ -11,7 +11,7 @@ Aim: Run "Hello World" Application
 2. Next thing is to execute it. For example we can use a shell to execute a program. Shell it's a program command-line interpreter. Shell tells OS to switch into our program. Give resources to us and put out program to RAM which will be executed by processor.
 
 
-# Concurrency vs Parallelism ( Współbieżność vs Równoległość )
+# Concurrency vs Parallelism (Współbieżność vs Równoległość)
 
 Concurrency - we as a human we are concurrent. It's like we have this pile up of things to do and it's up to us to figure out how to get that done. So for example we have a 100 thing to do and are gonna do it thoughut the day. For example we can't do it all of it in the moring. We can do few in the morning. 
 Example: Single-Core CPU
