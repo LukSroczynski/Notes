@@ -43,18 +43,18 @@ Python for example have a normally a interpreter, but there is also compilers fo
 
 # Types of Software Developers:
 
-<b>  </b>
-<b>  </b>
-<b>  </b>
-<b>  </b>
-<b>  </b>
-<b>  </b>
-<b>  </b>
-<b>  </b>
-<b>  </b>
-<b>  </b>
-<b>  </b>
-<b>  </b>
+- <b> Front-end </b> - those guys specialzed in code that runs inside your web browser. They works really close with designer and make they make pages responsive.
+- <b> Mobile </b>
+- <b>  </b>
+- <b>  </b>
+- <b>  </b>
+- <b>  </b>
+- <b>  </b>
+- <b>  </b>
+- <b>  </b>
+- <b>  </b>
+- <b>  </b>
+- <b>  </b>
 
 
 
