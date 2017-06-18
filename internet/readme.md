@@ -55,10 +55,8 @@ Basic words:
 - Authorization vs Authentication
 
 > Authentication is the mechanism whereby systems may securely identify their users. Authentication systems seek to provide answers to the questions:
-
-Who is the user?
-
-Is the user really who he/she represents himself to be?
+>> Who is the user? <br>
+>> Is the user really who he/she represents himself to be?
 
 > Asymmetric RSA
 
