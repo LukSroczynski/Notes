@@ -1,6 +1,6 @@
 # What is web socket? 
 
-Client-Server - internet connection connects those two. Internet connection is Full-Duplex, means data can flow in both direction. Also it's reliable (niezawodny). So socket is just a end connection. So there is Server-Socket and Client-Socket. One connection needs two sockets.
+Client-Server - web-client-socket and web-server-socket, internet connects those two web sockets. Internet connection is Full-Duplex, means data can flow in both direction. Also it's reliable (niezawodny). So socket is just an end connection. So there is Server-Socket and Client-Socket. One connection needs two sockets.
 
 # Web Browsers
 
