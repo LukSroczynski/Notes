@@ -50,7 +50,7 @@ Let's say we go to Cafe-shop everyday. We take caffe every day. Any interaction 
 
 # Computer Security
 
-> Basic words
+Basic words: 
 
 > Authorization vs Authentication
 
@@ -65,6 +65,8 @@ Let's say we go to Cafe-shop everyday. We take caffe every day. Any interaction 
 > PRIVATE KEY
 
 > CIPHER
+
+
 
 
 
