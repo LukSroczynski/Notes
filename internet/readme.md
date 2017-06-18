@@ -53,11 +53,17 @@ Let's say we go to Cafe-shop everyday. We take caffe every day. Any interaction 
 > Basic words
 
 > Authorization vs Authentication
+
 > Asymmetric RSA
+
 > Symmetric AES
+
 > SSL, HTTPS
+
 > PUBLIC KEY
+
 > PRIVATE KEY
+
 > CIPHER
 
 
