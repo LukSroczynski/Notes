@@ -64,7 +64,6 @@ Basic words:
 >> Is user X authorized to perform operation P?
 >> Is user X authorized to perform operation P on resource R?
 
-
 > Asymmetric RSA
 
 > Symmetric AES
