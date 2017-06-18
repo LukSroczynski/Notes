@@ -40,6 +40,8 @@ e.g. You have DOM-tree and there is a tag that is hidden. If you hide something 
 - response status codes
 - headers - bit of information that you send with response / request. Cool header is cache-control determines how those resurces are cached. 
 
+# Sessions & Cookies
+
 
 
 
