@@ -48,4 +48,30 @@ Let's say we go to Cafe-shop everyday. We take caffe every day. Any interaction 
 
 > cookies - cookies remembers sessions, it's useful to get session. Client-side. It stores the state 
 
+# Computer Security
+
+> Basic words
+
+> Authorization vs Authentication
+> Asymmetric RSA
+> Symmetric AES
+> SSL, HTTPS
+> PUBLIC KEY
+> PRIVATE KEY
+> CIPHER
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
