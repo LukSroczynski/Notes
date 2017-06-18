@@ -15,22 +15,22 @@ Basic components of web browser:
 
 
 Rendering engine includes and do stuff like:
-```
 
-Resource gathering - web uses network to get resources, HTML, CSS, Pictures... 
 
-Parse HTML & Create DOM Tree - (DOM - document object tree) DOM is very flexible, if you fotget a tag it's still gonna work, so basically this point refers to taking resources from point above and create a tree from that. 
+> Resource gathering - web uses network to get resources, HTML, CSS, Pictures... 
 
-Create Render Tree From DOM Tree - now take CSS from resources and apply that to DOM tree (HTML files)
+> Parse HTML & Create DOM Tree - (DOM - document object tree) DOM is very flexible, if you fotget a tag it's still gonna work, so basically this point refers to taking resources from point above and create a tree from that. 
 
-Layout - position all elements
+> Create Render Tree From DOM Tree - now take CSS from resources and apply that to DOM tree (HTML files)
 
-Painting - send to UI back-end and display onto screen, draw stuff
+> Layout - position all elements
 
-Additional: 
+> Painting - send to UI back-end and display onto screen, draw stuff
+
+> Additional: 
 e.g. You have DOM-tree and there is a tag that is hidden. If you hide something then Render-Tree-part doesn't gonna need to render HTML's tag that is hidden. 
 
-```
+
 
 # HTTP Overview
 
