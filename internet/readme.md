@@ -58,6 +58,13 @@ Basic words:
 >> Who is the user? <br>
 >> Is the user really who he/she represents himself to be?
 
+> Authorization, by contrast, is the mechanism by which a system determines what level of access a particular (authenticated) user should have to resources controlled by the system. For an example that may or may not be related to a web-based scenario, a database management system might be designed so as to provide certain specified individuals with the ability to retrieve information from a database but not the ability to change data stored in the database, while giving other individuals the ability to change data. Authorization systems provide answers to the questions:
+
+>> Is user X authorized to access resource R?
+>> Is user X authorized to perform operation P?
+>> Is user X authorized to perform operation P on resource R?
+
+
 > Asymmetric RSA
 
 > Symmetric AES
