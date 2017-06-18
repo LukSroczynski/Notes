@@ -8,7 +8,7 @@ Basic components of web browser:
 - user interface, buttons etc.
 - browser engine
 - rendering engine, taking html, css, js and putting something on the screen
-- networking, uses HTTP, requests, resolve DNS's
+- networking, uses HTTP, requests, responses, resolve DNS's
 - javascript interpreter
 - UI back-end - stuff that draw stuff that you want like i want rectangle and you have it... xd
 - data persistance, cookies, search-history and all other data
@@ -31,12 +31,14 @@ Rendering engine includes and do stuff like:
 e.g. You have DOM-tree and there is a tag that is hidden. If you hide something then Render-Tree-part doesn't gonna need to render HTML's tag that is hidden. 
 
 
-
 # HTTP Overview
 
-
-
-
+- follows client-server model
+- stateless which means every transaction is independent is not related to others. Fliping a coin is a stateless example. BUT web application still provide you state: session & cookies mechanisms
+- it's application layer which means it on top of TCP/IP layer. In most cases uses TCP. 
+- client-actions - GET / POST / PUT / DELETE 
+- response status codes
+- headers - bit of information that you send with response / request. Cool header is cache-control determines how those resurces are cached. 
 
 
 
