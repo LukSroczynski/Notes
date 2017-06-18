@@ -42,8 +42,10 @@ e.g. You have DOM-tree and there is a tag that is hidden. If you hide something 
 
 # Sessions & Cookies
 
+Let's say we go to Cafe-shop everyday. We take caffe every day. Any interaction with Cafe is stateless, we go in, order, take Cafe, done. 
 
+> session -  gives state, they are stored on the server. But sometimes on the client-side. Session can be stored on the client-side. Major thing is that on cline-side is faster. It doesn't have to look up at server, so it's very fast. But mostly it's on server.
 
-
+> cookies - cookies remembers sessions, it's useful to get session. Client-side. It stores the state 
 
 
