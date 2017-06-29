@@ -2,6 +2,8 @@
 
 <h3> What is testing? </h3>
 
-TEST INPUT <br>
-<b> Software under test </b> <br>
-TEST OUTPUT <br>
+Basic workflow: 
+
+- TEST INPUT <br>
+- <b> Software under test </b> <br>
+- TEST OUTPUT (okey OR debug)
