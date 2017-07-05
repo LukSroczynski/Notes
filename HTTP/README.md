@@ -8,7 +8,17 @@ DNS - converts numeric address to more human-friendly host names.
 
 router - route information. 
 
+TCP - it's protocol that provide to guarantee delivery. If you gonna miss some package then TCP will ask provider to retransmit.
 
+Type of Service is verified by port. 
+21 - FTP
+22 - SSH 
+25 - SMTP
+53 - DNS 
+80 - HTTP 
+443 - HTTPS
+
+firewall - 
 
 ## Other stuff - CORS 
 ```
