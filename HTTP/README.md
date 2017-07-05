@@ -27,6 +27,7 @@ firewall - keeps packets that you don't want comming in.
 
 VPS - tunnel that you can do when you access some resources. Is encrypted. 
 
+
 ## Other stuff - CORS 
 ```
 mechanism that allow to share resoruces between domains
