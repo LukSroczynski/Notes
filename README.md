@@ -17,3 +17,6 @@ After: git reset --hard HEAD~1
 
 TDD:
 https://www.youtube.com/watch?v=45T32_ImO2c&list=PLBBog2r6uMCSa9_mNISSpTcbTcKlMAe6t
+
+DataStructures:
+https://medium.freecodecamp.org/10-common-data-structures-explained-with-videos-exercises-aaff6c06fb2b
