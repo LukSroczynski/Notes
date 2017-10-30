@@ -2,13 +2,6 @@
 
 
 
-
-
-
-
-
-
-
 # Narzędzia
 
 Narzędzie do archiwizacji:  
@@ -48,8 +41,28 @@ $ mkdir folder_name/sub_fold/sub_fold_2
 
 ```
 
+Listowanie zawartości folderów
+
+```
+# Listowanie jednego pliku per linia
+ls -l
+
+# Listowanie folderu bez zawartości 
+ls -ld
 
 
+```
 
 
+# Skróty w terminalu
 
+```
+
+# Czyszczenie command-prompt
+CTRL + U
+
+# Czyszczenie terminala
+CTRL + L
+
+
+```
