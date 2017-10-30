@@ -1,6 +1,13 @@
 # Konfiguracja
 
+```
 
+# Uruchamianie sublime z terminala ( na przykładzie Mac OS X )
+1. Znajdujemy gdzie mamy zainstalowanego sublime
+2. Tworzymy symbolic link pliku "subl"
+$ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
+
+```
 
 # Narzędzia
 
