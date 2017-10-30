@@ -15,15 +15,30 @@ Narzędzie do archiwizacji:
 
 ```
 
+## Tworzenie nieskompresowanego archiwum
+
 # Tworzenie archiwum
-tar cvf file_name.tar dir_name/
+$ tar cvf file_name.tar.gz dir_name/
 
 # Rozpakowanie archiwum
-tar xvf file_name
+$ tar xvf file_name
+
+## Tworzenie skompresowanego archiwum
+$ tar cvzf archive_name.tar.gz dirname/
+$ tar xvfz archive_name.tar.gz
+
 
 c - tworzy nowe archiwum
-v - listuje pliki, które rozpakował/spakował w terminalu 
-f - nazwa pliku 
+x - wypakowuje z archiwum
+
+v - listuje pliki w terminalu (rozpakowane / spakowane) 
+f - nazwa pliku
+z - otwiera/tworzy skompresowane archiwum
 
 ```
+
+
+
+
+
 
