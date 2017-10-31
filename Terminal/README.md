@@ -65,8 +65,8 @@ Znajdywanie procesu po portcie i zabicie go:
 $ sudo lsof -i tcp:3000 
 
 Wynik:
-COMMAND   PID              USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
-node    35154 lukasz.sroczynski   17u  IPv6 0x8263859e09c9a1b7      0t0  TCP *:hbci (LISTEN)
+COMMAND   PID       USER        FD   TYPE            DEVICE SIZE/OFF NODE NAME
+node      35154     user.name   xxx  IPv6 xxxxx      0t0  TCP *:hbci (LISTEN)
 
 $ kill -9 35154
 
