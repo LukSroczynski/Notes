@@ -84,6 +84,17 @@ CTRL + U
 # Czyszczenie terminala
 CTRL + L
 
+# Przejście do początku lini
+CTRL + A
+
+# Przerwij/Zabij cokolwiek masz uruchomione
+CTRL + C
+
+# Zawieś proces
+CTRL + Z
+## Po tym można przywrócić proces
+$ fg "%process_name" || $ fg 12345_process_ID
+
 
 ```
 
