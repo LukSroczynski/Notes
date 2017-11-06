@@ -95,8 +95,8 @@ Praca na nowym branch'u
 # Tworzenie nowego branch'a
 $ git checkout -b branch_name
 
-# 
-
+# Wrzucenie lokalnych zmian i śledzenie branch'a 
+$ git push -u branch_name
 
 ```
 
