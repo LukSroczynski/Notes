@@ -86,3 +86,18 @@ CTRL + L
 
 
 ```
+
+# Używanie Gita
+
+```
+Praca na nowym branch'u
+
+# Tworzenie nowego branch'a
+$ git checkout -b branch_name
+
+# 
+
+
+```
+
+
