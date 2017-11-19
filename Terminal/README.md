@@ -111,4 +111,11 @@ $ git push -u branch_name
 
 ```
 
+# Używanie gradle
+
+```
+Wszystkie taski dostępne z projektu
+./gradlew tasks
+
+```
 
