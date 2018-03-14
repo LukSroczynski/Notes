@@ -23,3 +23,10 @@ https://medium.freecodecamp.org/10-common-data-structures-explained-with-videos-
 
 MongoDB course: <br> 
 https://university.mongodb.com/courses/M101J/about
+
+fix for Spring Boot plugin requires Gradle 4.0 or later. The current version is Gradle 3.5.1
+```
+task wrapper(type: Wrapper) {
+	gradleVersion = '4.6'
+}
+```
