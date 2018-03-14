@@ -30,3 +30,6 @@ task wrapper(type: Wrapper) {
 	gradleVersion = '4.6'
 }
 ```
+```
+./gradlew assemble
+```
